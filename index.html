@@ -381,6 +381,16 @@
     }
     .day-divider hr { flex: 1; border: none; border-top: 1px solid #ddd; }
 
+    /* ── PHONE LINK ── */
+    .phone-link {
+      color: #1a6fbf;
+      text-decoration: none;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .phone-link::before { content: "📞 "; font-size: 0.9em; }
+    .phone-link:hover { text-decoration: underline; }
+
     /* ── MAP LINK ── */
     .map-link {
       color: #1a6fbf;
@@ -465,7 +475,7 @@
         <div class="alert-icon">&#128274;</div>
         <div class="alert-body">
           <strong>Edinburgh check-in instructions</strong>
-          <span>Should arrive from host by Jun 8. If not: Francesco at +44 20 3778 2170</span>
+          <span>Should arrive from host by Jun 8. If not: Francesco at <a class="phone-link" href="tel:+442037782170"><a class="phone-link" href="tel:+442037782170">+44 20 3778 2170</a></a></span>
         </div>
       </div>
 
@@ -573,7 +583,7 @@
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">After 3:00 PM (no later than 8 PM)</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Sun Jun 14 by 10:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">S8J49WS84NV5</span></span></div>
-        <div class="detail-row"><span class="detail-label">Host</span><span class="detail-value">Francesco &bull; +44 20 3778 2170</span></div>
+        <div class="detail-row"><span class="detail-label">Host</span><span class="detail-value">Francesco &bull; <a class="phone-link" href="tel:+442037782170"><a class="phone-link" href="tel:+442037782170">+44 20 3778 2170</a></a></span></div>
         <div class="detail-note warn">&#9888;&#65039; If check-in instructions not received by Jun 8, contact Francesco directly.</div>
       </div>
     </div>
@@ -633,7 +643,7 @@
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Fri Jun 19 by 10:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">72073826626599</span></span></div>
         <div class="detail-row"><span class="detail-label">Hotel ref</span><span class="detail-value"><span class="ref-code">EXP-r2NZ04QA</span></span></div>
-        <div class="detail-row"><span class="detail-label">Due at property</span><span class="detail-value">£500 deposit + £100 cleaning + $135.21</span></div>
+
         <div class="detail-note warn">&#9888;&#65039; No front desk. Contact 48h before arrival. Online registration + photo ID required.</div>
       </div>
     </div>
@@ -645,7 +655,7 @@
         <div class="card-label">
           <div class="date">Jun 17 &bull; 8:00 PM</div>
           <div class="title">Dinner: The Jugged Hare</div>
-          <div class="sub">49 Chiswell St &bull; Min spend £120</div>
+          <div class="sub">49 Chiswell St, EC1Y 4SA</div>
         </div>
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
@@ -653,7 +663,7 @@
         <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=49+Chiswell+Street+London+EC1Y+4SA" target="_blank" rel="noopener">49 Chiswell St, EC1Y 4SA</a></span></div>
         <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">DMN-16952452743</span></span></div>
         <div class="detail-row"><span class="detail-label">Time</span><span class="detail-value">8:00–11:00 PM &bull; 4 people</span></div>
-        <div class="detail-row"><span class="detail-label">Min spend</span><span class="detail-value">£120.00 on the day</span></div>
+        <div class="detail-row"><span class="detail-label">Min spend</span><span class="detail-value">£120 (card/contactless only)</span></div>
         <div class="detail-note">Cashless venue — card/contactless only.</div>
       </div>
     </div>
@@ -711,8 +721,8 @@
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">From 3:00 PM Jun 19</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 23 by 11:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Vrbo ref</span><span class="detail-value"><span class="ref-code">HA-YF8T78</span></span></div>
-        <div class="detail-row"><span class="detail-label">Host Nicolas</span><span class="detail-value">+1 877 228 3145</span></div>
-        <div class="detail-note warn">&#9888;&#65039; Confirm $4,134.98 payment was charged. Check-in instructions arrive Jun 16.</div>
+        <div class="detail-row"><span class="detail-label">Host Nicolas</span><span class="detail-value"><a class="phone-link" href="tel:+18772283145">+1 877 228 3145</a></span></div>
+        <div class="detail-note">Check-in instructions arrive Jun 16. Contact Nicolas with questions.</div>
       </div>
     </div>
 
@@ -767,8 +777,8 @@
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">After 4:00 PM Jun 23</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 27 by 10:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Airbnb ref</span><span class="detail-value"><span class="ref-code">HMS9JARNF9</span></span></div>
-        <div class="detail-row"><span class="detail-label">Host Rachel</span><span class="detail-value">+41 79 255 37 82</span></div>
-        <div class="detail-note warn">&#128683; No smoke/CO alarm — bring portable detector.<br><br>&#128179; $1,675.87 due Jun 8 (Apple Pay).</div>
+        <div class="detail-row"><span class="detail-label">Host Rachel</span><span class="detail-value"><a class="phone-link" href="tel:+41792553782">+41 79 255 37 82</a></span></div>
+        <div class="detail-note warn">&#128683; No smoke/CO alarm — bring portable detector.</div>
       </div>
     </div>
 
@@ -875,7 +885,7 @@
         <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">11:00 AM &bull; <a class="map-link" href="https://maps.google.com/?q=Edinburgh+Waverley+Station+Edinburgh" target="_blank" rel="noopener">Edinburgh Waverley</a></span></div>
         <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">3:11 PM &bull; <a class="map-link" href="https://maps.google.com/?q=London+Kings+Cross+Station" target="_blank" rel="noopener">London Kings Cross</a></span></div>
         <div class="detail-row"><span class="detail-label">Seats</span><span class="detail-value">Coach G &mdash; 55, 56, 57, 58</span></div>
-        <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">£96.50</span></div>
+
       </div>
     </div>
 
@@ -912,7 +922,7 @@
         <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">3:26 PM &bull; <a class="map-link" href="https://maps.google.com/?q=Basel+SBB+Centralbahnplatz+1+Basel" target="_blank" rel="noopener">Basel SBB</a></span></div>
         <div class="detail-row"><span class="detail-label">Train</span><span class="detail-value">TGV Lyria 9213 &bull; 1st Class &bull; Carriage 13</span></div>
         <div class="detail-row"><span class="detail-label">Seats</span><span class="detail-value">368, 369, 371, 372 (upstairs)</span></div>
-        <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">$477.50</span></div>
+
       </div>
     </div>
 
@@ -949,9 +959,9 @@
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">After 3 PM (by 8 PM)</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 14 by 10:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">S8J49WS84NV5</span></span></div>
-        <div class="detail-row"><span class="detail-label">Host Francesco</span><span class="detail-value">+44 20 3778 2170</span></div>
+        <div class="detail-row"><span class="detail-label">Host Francesco</span><span class="detail-value"><a class="phone-link" href="tel:+442037782170">+44 20 3778 2170</a></span></div>
         <div class="detail-row"><span class="detail-label">Email</span><span class="detail-value">reservations.scotland@joivy.com</span></div>
-        <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">$1,555.28</span></div>
+
       </div>
     </div>
 
@@ -971,8 +981,8 @@
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 19 by 10:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">72073826626599</span></span></div>
         <div class="detail-row"><span class="detail-label">Hotel ref</span><span class="detail-value"><span class="ref-code">EXP-r2NZ04QA</span></span></div>
-        <div class="detail-row"><span class="detail-label">Prepaid</span><span class="detail-value">$2,776.27</span></div>
-        <div class="detail-row"><span class="detail-label">Due at property</span><span class="detail-value">£500 deposit + £100 cleaning + $135.21</span></div>
+
+
         <div class="detail-note warn">&#9888;&#65039; No front desk. Contact 48h before. Online registration + photo ID required. Min age 25.</div>
       </div>
     </div>
@@ -993,9 +1003,9 @@
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 23 by 11:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Vrbo ref</span><span class="detail-value"><span class="ref-code">HA-YF8T78</span></span></div>
         <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">73447654569018</span></span></div>
-        <div class="detail-row"><span class="detail-label">Host Nicolas</span><span class="detail-value">+1 877 228 3145</span></div>
-        <div class="detail-row"><span class="detail-label">Total</span><span class="detail-value">$2,777.14 + $3,000 deposit</span></div>
-        <div class="detail-note warn">&#9888;&#65039; Confirm $4,134.98 charged. Check-in instructions arrive Jun 16.</div>
+        <div class="detail-row"><span class="detail-label">Host Nicolas</span><span class="detail-value"><a class="phone-link" href="tel:+18772283145">+1 877 228 3145</a></span></div>
+
+        <div class="detail-note">Check-in instructions arrive Jun 16. Contact Nicolas with questions.</div>
       </div>
     </div>
 
@@ -1014,9 +1024,8 @@
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">After 4 PM Jun 23</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 27 by 10:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Airbnb ref</span><span class="detail-value"><span class="ref-code">HMS9JARNF9</span></span></div>
-        <div class="detail-row"><span class="detail-label">Host Rachel</span><span class="detail-value">+41 79 255 37 82</span></div>
-        <div class="detail-row"><span class="detail-label">Total</span><span class="detail-value">$3,264.27</span></div>
-        <div class="detail-row"><span class="detail-label">Remaining</span><span class="detail-value">$1,675.87 due Jun 8 (Apple Pay)</span></div>
+        <div class="detail-row"><span class="detail-label">Host Rachel</span><span class="detail-value"><a class="phone-link" href="tel:+41792553782">+41 79 255 37 82</a></span></div>
+
         <div class="detail-note warn">&#128683; No smoke/CO alarm — bring portable detector.</div>
       </div>
     </div>
@@ -1039,7 +1048,7 @@
         <div class="detail-row"><span class="detail-label">Order</span><span class="detail-value"><span class="ref-code">5347986</span></span></div>
         <div class="detail-row"><span class="detail-label">Seats</span><span class="detail-value">Yard, Row C, Seats 23–26</span></div>
         <div class="detail-row"><span class="detail-label">Pickup</span><span class="detail-value">Box Office &bull; eTickets emailed Jun 13</span></div>
-        <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">£63.00 incl. interval drinks</span></div>
+
       </div>
     </div>
 
@@ -1057,7 +1066,7 @@
         <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=49+Chiswell+Street+London+EC1Y+4SA" target="_blank" rel="noopener">49 Chiswell St, EC1Y 4SA</a></span></div>
         <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">DMN-16952452743</span></span></div>
         <div class="detail-row"><span class="detail-label">Time</span><span class="detail-value">8:00–11:00 PM &bull; 4 people</span></div>
-        <div class="detail-row"><span class="detail-label">Min spend</span><span class="detail-value">£120.00</span></div>
+        <div class="detail-row"><span class="detail-label">Min spend</span><span class="detail-value">£120 (card/contactless only)</span></div>
         <div class="detail-note">Cashless — card/contactless only.</div>
       </div>
     </div>
@@ -1076,7 +1085,7 @@
         <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">73465019743842</span></span></div>
         <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Port+de+la+Bourdonnais+Paris+75007" target="_blank" rel="noopener">Port de la Bourdonnais, 75007</a></span></div>
         <div class="detail-row"><span class="detail-label">Tickets</span><span class="detail-value">4 vouchers &bull; Paul Sanders</span></div>
-        <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">$44.13</span></div>
+
         <div class="detail-note">Confirm exact departure time on Expedia voucher.</div>
       </div>
     </div>
@@ -1112,9 +1121,9 @@
         <table class="ref-table">
           <thead><tr><th>Who</th><th>Contact</th></tr></thead>
           <tbody>
-            <tr><td>Edinburgh (Francesco)</td><td>+44 20 3778 2170 / reservations.scotland@joivy.com</td></tr>
-            <tr><td>Paris (Nicolas)</td><td>+1 877 228 3145</td></tr>
-            <tr><td>Wengen (Rachel)</td><td>+41 79 255 37 82</td></tr>
+            <tr><td>Edinburgh (Francesco)</td><td><a class="phone-link" href="tel:+442037782170">+44 20 3778 2170</a> / reservations.scotland@joivy.com</td></tr>
+            <tr><td>Paris (Nicolas)</td><td><a class="phone-link" href="tel:+18772283145">+1 877 228 3145</a></td></tr>
+            <tr><td>Wengen (Rachel)</td><td><a class="phone-link" href="tel:+41792553782">+41 79 255 37 82</a></td></tr>
             <tr><td>Bateaux Parisiens</td><td>Bpccota.Fr.FR@sodexo.com</td></tr>
           </tbody>
         </table>
@@ -1210,7 +1219,7 @@
     } else if (d === 17 && h >= 20) {
       cardId = 'card-jugged';
       bannerTitle = 'Tonight: The Jugged Hare';
-      bannerSub   = '8:00–11:00 PM • 49 Chiswell St • Min spend £120';
+      bannerSub   = '8:00–11:00 PM • 49 Chiswell St, EC1Y 4SA';
     } else if (d === 18) {
       cardId = 'card-london';
       bannerTitle = 'Today: London';
