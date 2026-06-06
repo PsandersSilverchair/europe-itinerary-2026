@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanders Europe 2026</title>
+  <style>
+    :root {
+      --edinburgh: #4a6fa5;
+      --london:    #2e7d5e;
+      --paris:     #8b3a8b;
+      --swiss:     #c0392b;
+      --transit:   #e67e22;
+      --bg:        #f4f4f0;
+      --card:      #ffffff;
+      --text:      #1a1a1a;
+      --muted:     #555;
+      --warn:      #c0392b;
+      --warn-bg:   #fdf0ee;
+      --ok:        #1e7e4a;
+      --ok-bg:     #edf7f1;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: #1a2a3a;
+      color: #fff;
+      padding: 20px 16px 16px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
+    header p  { font-size: 0.95rem; color: #aac4e0; margin-top: 4px; }
+
+    .route-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .chip {
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .chip.edinburgh { background: var(--edinburgh); }
+    .chip.london    { background: var(--london); }
+    .chip.paris     { background: var(--paris); }
+    .chip.swiss     { background: var(--swiss); }
+
+    /* ── NAV TABS ── */
+    nav {
+      display: flex;
+      overflow-x: auto;
+      background: #243040;
+      scrollbar-width: none;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav::-webkit-scrollbar { display: none; }
+    nav a {
+      flex: 0 0 auto;
+      color: #aac4e0;
+      text-decoration: none;
+      padding: 13px 16px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    nav a:hover, nav a.active { color: #fff; border-color: #fff; }
+
+    /* ── MAIN CONTENT ── */
+    main { padding: 14px 14px 60px; max-width: 680px; margin: 0 auto; }
+
+    /* ── ALERTS ── */
+    .alert {
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .alert-warn { background: var(--warn-bg); border-left: 4px solid var(--warn); }
+    .alert-ok   { background: var(--ok-bg);   border-left: 4px solid var(--ok); }
+    .alert-icon { font-size: 1.2rem; line-height: 1.3; }
+    .alert-body { flex: 1; }
+    .alert-body strong { display: block; font-size: 1rem; margin-bottom: 2px; }
+    .alert-body span   { font-size: 0.9rem; color: var(--muted); }
+
+    /* ── SECTION HEADINGS ── */
+    .section-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 22px 0 8px;
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 16px;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .card-header:active { background: #f7f7f7; }
+
+    .card-icon {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .bg-edinburgh { background: #dde8f5; }
+    .bg-london    { background: #d8eeeb; }
+    .bg-paris     { background: #ecdcec; }
+    .bg-swiss     { background: #faeaea; }
+    .bg-transit   { background: #fde9d1; }
+
+    .card-label { flex: 1; }
+    .card-label .date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .card-label .title { font-size: 1.05rem; font-weight: 700; margin-top: 1px; }
+    .card-label .sub   { font-size: 0.88rem; color: var(--muted); margin-top: 1px; }
+
+    .card-chevron {
+      font-size: 1rem;
+      color: #bbb;
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    .card.open .card-chevron { transform: rotate(90deg); }
+
+    .card-body {
+      display: none;
+      padding: 0 16px 16px;
+      border-top: 1px solid #f0f0f0;
+    }
+    .card.open .card-body { display: block; }
+
+    /* ── DETAIL ROWS ── */
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 0.95rem;
+    }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-label { color: var(--muted); font-size: 0.88rem; flex-shrink: 0; }
+    .detail-value { text-align: right; font-weight: 600; word-break: break-all; }
+
+    .ref-code {
+      font-family: "SF Mono", "Fira Code", monospace;
+      background: #f0f4f8;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-left: 6px;
+    }
+    .badge-warn { background: #fde0dd; color: #b02020; }
+    .badge-ok   { background: #d4f0e2; color: #1a6b3a; }
+
+    .detail-note {
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: #f8f8f8;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .detail-note.warn { background: var(--warn-bg); color: #7a1a1a; }
+
+    /* ── LEGS (flights/trains) ── */
+    .leg {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f2f2f2;
+    }
+    .leg:last-child { border-bottom: none; }
+    .leg-times { flex: 1; }
+    .leg-dep, .leg-arr {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .leg-route {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .leg-arrow {
+      font-size: 1.2rem;
+      color: #bbb;
+    }
+    .leg-dest { flex: 1; text-align: right; }
+    .leg-duration {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+      min-width: 60px;
+    }
+
+    .layover-bar {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+      padding: 4px 0;
+      border-bottom: 1px solid #f2f2f2;
+    }
+
+    /* ── SEAT GRID ── */
+    .seat-grid {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .seat-pill {
+      background: #e8f0fe;
+      color: #1a3a7a;
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* ── QUICK REF TABLE ── */
+    .ref-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .ref-table th {
+      text-align: left;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      padding: 6px 8px;
+      border-bottom: 2px solid #eee;
+    }
+    .ref-table td {
+      padding: 10px 8px;
+      border-bottom: 1px solid #f2f2f2;
+      vertical-align: top;
+    }
+    .ref-table tr:last-child td { border-bottom: none; }
+    .ref-table td:first-child { color: var(--muted); font-size: 0.85rem; }
+    .ref-table td:last-child  { font-family: "SF Mono", "Fira Code", monospace; font-size: 0.85rem; word-break: break-all; }
+
+    /* ── DIVIDER ── */
+    .day-divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 18px 0 8px;
+    }
+    .day-divider .day-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .day-divider hr {
+      flex: 1;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aaa;
+      padding: 20px 16px;
+    }
+
+    /* ── SECTION PAGES ── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    @media (min-width: 480px) {
+      body { font-size: 18px; }
+      main { padding: 20px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>&#9992;&#65039; Sanders Europe 2026</h1>
+  <p>Paul &middot; Laura &middot; Levi &middot; Micah &nbsp;&bull;&nbsp; Jun 10 &ndash; 27</p>
+  <div class="route-chips">
+    <span class="chip edinburgh">Edinburgh</span>
+    <span class="chip london">London</span>
+    <span class="chip paris">Paris</span>
+    <span class="chip swiss">Wengen</span>
+  </div>
+</header>
+
+<nav id="main-nav">
+  <a href="#" data-page="alerts" class="active">&#128680; Alerts</a>
+  <a href="#" data-page="timeline">&#128197; Timeline</a>
+  <a href="#" data-page="flights">&#9992; Flights</a>
+  <a href="#" data-page="trains">&#128646; Trains</a>
+  <a href="#" data-page="stays">&#127968; Stays</a>
+  <a href="#" data-page="activities">&#127914; Events</a>
+  <a href="#" data-page="refs">&#128196; Refs</a>
+</nav>
+
+<main>
+
+  <!-- ═══════════════ ALERTS ═══════════════ -->
+  <div id="page-alerts" class="page active">
+    <div class="section-title">Action items</div>
+
+    <div class="alert alert-warn">
+      <div class="alert-icon">&#128680;</div>
+      <div class="alert-body">
+        <strong>London apt — cancel deadline TOMORROW</strong>
+        <span>Eight Apartments Shoreditch non-refundable after Jun 7 at 6:00 PM London time (Expedia #72073826626599)</span>
+      </div>
+    </div>
+
+    <div class="alert alert-warn">
+      <div class="alert-icon">&#9888;&#65039;</div>
+      <div class="alert-body">
+        <strong>Eurostar — passenger info required</strong>
+        <span>Must complete before tickets unlock. PNR: CM4NJM &mdash; eurostar.com or app</span>
+      </div>
+    </div>
+
+    <div class="alert alert-warn">
+      <div class="alert-icon">&#9888;&#65039;</div>
+      <div class="alert-body">
+        <strong>Paris apt payment &mdash; confirm charged</strong>
+        <span>$4,134.98 was due May 20 to Vrbo (HA-YF8T78). Verify this hit your card.</span>
+      </div>
+    </div>
+
+    <div class="alert alert-warn">
+      <div class="alert-icon">&#128179;</div>
+      <div class="alert-body">
+        <strong>Wengen Airbnb payment due Jun 8</strong>
+        <span>$1,675.87 upcoming charge to Apple Pay (HMS9JARNF9)</span>
+      </div>
+    </div>
+
+    <div class="alert alert-warn">
+      <div class="alert-icon">&#10060;</div>
+      <div class="alert-body">
+        <strong>Basel &rarr; Wengen rail NOT booked</strong>
+        <span>TGV arrives Basel 3:26 PM. Wengen check-in 4 PM. ~2+ hr journey. Book ASAP.</span>
+      </div>
+    </div>
+
+    <div class="alert alert-warn">
+      <div class="alert-icon">&#128274;</div>
+      <div class="alert-body">
+        <strong>Edinburgh check-in instructions</strong>
+        <span>Should arrive from host by Jun 8. If not: Francesco at +44 20 3778 2170</span>
+      </div>
+    </div>
+
+    <div class="alert alert-warn">
+      <div class="alert-icon">&#128274;</div>
+      <div class="alert-body">
+        <strong>London apt check-in — no front desk</strong>
+        <span>Contact Eight Apartments 48h before Jun 14 arrival. Online registration + photo ID required.</span>
+      </div>
+    </div>
+
+    <div class="alert alert-warn">
+      <div class="alert-icon">&#128683;</div>
+      <div class="alert-body">
+        <strong>Safety: Wengen Airbnb has no smoke/CO alarm</strong>
+        <span>Bring a portable carbon monoxide and smoke detector.</span>
+      </div>
+    </div>
+
+    <div class="alert alert-ok">
+      <div class="alert-icon">&#128196;</div>
+      <div class="alert-body">
+        <strong>Globe eTickets emailed Jun 13</strong>
+        <span>Collect at Box Office with order confirmation (Order 5347986)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ TIMELINE ═══════════════ -->
+  <div id="page-timeline" class="page">
+
+    <div class="day-divider"><span class="day-label">Wed Jun 10</span><hr></div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-transit">&#9992;&#65039;</div>
+        <div class="card-label">
+          <div class="date">Departure Day</div>
+          <div class="title">Fly RIC &rarr; Edinburgh</div>
+          <div class="sub">Departs 5:05 PM &bull; Overnight flight via JFK</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Confirmation</span><span class="detail-value"><span class="ref-code">HXZFDY</span></span></div>
+        <div class="detail-row"><span class="detail-label">RIC &rarr; JFK</span><span class="detail-value">Delta 5301 &bull; 5:05–6:41 PM &bull; Seats 11A-D</span></div>
+        <div class="detail-row"><span class="detail-label">Layover JFK</span><span class="detail-value">2h 34m</span></div>
+        <div class="detail-row"><span class="detail-label">JFK &rarr; EDI</span><span class="detail-value">Delta 208 &bull; 9:15 PM &rarr; 9:20 AM +1 &bull; Seats 41F/G, 42F/G</span></div>
+      </div>
+    </div>
+
+    <div class="day-divider"><span class="day-label">Thu Jun 11 – Sun Jun 14</span><hr></div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-edinburgh">&#127956;</div>
+        <div class="card-label">
+          <div class="date">Jun 11–14 &bull; 3 nights</div>
+          <div class="title">Edinburgh</div>
+          <div class="sub">Secluded Brewery Apt &bull; Royal Mile</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value">Campbell's Close 10, EH8 8JJ</span></div>
+        <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">After 3:00 PM (no later than 8 PM)</span></div>
+        <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Sun Jun 14 by 10:00 AM</span></div>
+        <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">S8J49WS84NV5</span></span></div>
+        <div class="detail-row"><span class="detail-label">Host</span><span class="detail-value">Francesco &bull; +44 20 3778 2170</span></div>
+        <div class="detail-note warn">&#9888;&#65039; If check-in instructions not received by Jun 8, contact Francesco directly.</div>
+      </div>
+    </div>
+
+    <div class="day-divider"><span class="day-label">Sun Jun 14</span><hr></div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-transit">&#128646;</div>
+        <div class="card-label">
+          <div class="date">Jun 14 &bull; 11:00 AM</div>
+          <div class="title">Train: Edinburgh &rarr; London</div>
+          <div class="sub">LNER &bull; Arrives 3:11 PM Kings Cross</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">26SYHJJIU0</span></span></div>
+        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">11:00 AM Edinburgh Waverley</span></div>
+        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">3:11 PM London Kings Cross</span></div>
+        <div class="detail-row"><span class="detail-label">Seats</span><span class="detail-value">Coach G &bull; 55, 56, 57, 58</span></div>
+        <div class="detail-row"><span class="detail-label">Luggage</span><span class="detail-value">1 large case + 1 carry-on + 1 handbag per person</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-london">&#127981;</div>
+        <div class="card-label">
+          <div class="date">Jun 14 &bull; 6:30 PM</div>
+          <div class="title">Shakespeare's Globe</div>
+          <div class="sub">A Midsummer Night's Dream &bull; Yard standing</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Order</span><span class="detail-value"><span class="ref-code">5347986</span></span></div>
+        <div class="detail-row"><span class="detail-label">Seats</span><span class="detail-value">Yard, Row C, Seats 23–26</span></div>
+        <div class="detail-row"><span class="detail-value">Collect eTickets at Box Office (emailed Jun 13)</span></div>
+        <div class="detail-note">Train arrives 3:11 PM &mdash; ~3h 15m gap before show. Tight but workable.</div>
+      </div>
+    </div>
+
+    <div class="day-divider"><span class="day-label">Jun 14–19 &bull; London</span><hr></div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-london">&#127968;</div>
+        <div class="card-label">
+          <div class="date">Jun 14–19 &bull; 5 nights</div>
+          <div class="title">London</div>
+          <div class="sub">Eight Apartments Shoreditch</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value">3 King John Court, EC2A 3EZ</span></div>
+        <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">From 3:00 PM (ends 8:00 PM)</span></div>
+        <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Fri Jun 19 by 10:00 AM</span></div>
+        <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">72073826626599</span></span></div>
+        <div class="detail-row"><span class="detail-label">Hotel ref</span><span class="detail-value"><span class="ref-code">EXP-r2NZ04QA</span></span></div>
+        <div class="detail-row"><span class="detail-label">On-arrival fees</span><span class="detail-value">£500 deposit + £100 cleaning (GBP)</span></div>
+        <div class="detail-note warn">&#9888;&#65039; No front desk. Contact property 48h before arrival. Online registration + photo ID required.</div>
+      </div>
+    </div>
+
+    <div class="day-divider"><span class="day-label">Wed Jun 17</span><hr></div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-london">&#127869;&#65039;</div>
+        <div class="card-label">
+          <div class="date">Jun 17 &bull; 8:00 PM</div>
+          <div class="title">Dinner: The Jugged Hare</div>
+          <div class="sub">49 Chiswell St &bull; Min spend £120</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">DMN-16952452743</span></span></div>
+        <div class="detail-row"><span class="detail-label">Time</span><span class="detail-value">8:00–11:00 PM &bull; 4 people</span></div>
+        <div class="detail-row"><span class="detail-label">Min spend</span><span class="detail-value">£120.00 on the day</span></div>
+        <div class="detail-note">Cashless venue (card/contactless only). World Cup Collection booking.</div>
+      </div>
+    </div>
+
+    <div class="day-divider"><span class="day-label">Fri Jun 19</span><hr></div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-transit">&#128646;</div>
+        <div class="card-label">
+          <div class="date">Jun 19 &bull; 10:31 AM</div>
+          <div class="title">Eurostar: London &rarr; Paris</div>
+          <div class="sub">St Pancras &rarr; Gare du Nord &bull; 1:50 PM</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">PNR</span><span class="detail-value"><span class="ref-code">CM4NJM</span></span></div>
+        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">10:31 AM London St Pancras</span></div>
+        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">1:50 PM Paris Gare du Nord</span></div>
+        <div class="detail-row"><span class="detail-label">Class</span><span class="detail-value">Standard &bull; Coach 4 &bull; Seats 4, 3 (+2)</span></div>
+        <div class="detail-note warn">&#9888;&#65039; Passenger info must be completed before tickets unlock — eurostar.com or app.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-paris">&#9972;&#65039;</div>
+        <div class="card-label">
+          <div class="date">Jun 19 &bull; Afternoon</div>
+          <div class="title">Seine Cruise</div>
+          <div class="sub">Bateaux Parisiens &bull; 1 hour from Eiffel Tower</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">73465019743842</span></span></div>
+        <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value">Port de la Bourdonnais, Paris 75007</span></div>
+        <div class="detail-row"><span class="detail-label">Tickets</span><span class="detail-value">4 vouchers &bull; Paul Sanders</span></div>
+        <div class="detail-note">&#9989; Eurostar arrives 1:50 PM. Check voucher for exact cruise departure time.</div>
+      </div>
+    </div>
+
+    <div class="day-divider"><span class="day-label">Jun 19–23 &bull; Paris</span><hr></div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-paris">&#127968;</div>
+        <div class="card-label">
+          <div class="date">Jun 19–23 &bull; 4 nights</div>
+          <div class="title">Paris</div>
+          <div class="sub">Chic Parisian Two Bedroom &bull; 2nd arr.</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value">38 Rue Étienne Marcel, 75002</span></div>
+        <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">From 3:00 PM Fri Jun 19</span></div>
+        <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Tue Jun 23 by 11:00 AM</span></div>
+        <div class="detail-row"><span class="detail-label">Vrbo</span><span class="detail-value"><span class="ref-code">HA-YF8T78</span></span></div>
+        <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">73447654569018</span></span></div>
+        <div class="detail-row"><span class="detail-label">Host</span><span class="detail-value">Nicolas &bull; +1 877 228 3145</span></div>
+        <div class="detail-row"><span class="detail-label">Damage deposit</span><span class="detail-value">$3,000 refundable</span></div>
+        <div class="detail-note">Check-in instructions appear Jun 16. Non-refundable as of Jun 5.</div>
+        <div class="detail-note warn">&#9888;&#65039; Confirm $4,134.98 payment (due May 20) was charged to your card.</div>
+      </div>
+    </div>
+
+    <div class="day-divider"><span class="day-label">Tue Jun 23</span><hr></div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-transit">&#128646;</div>
+        <div class="card-label">
+          <div class="date">Jun 23 &bull; 12:22 PM</div>
+          <div class="title">TGV: Paris &rarr; Basel</div>
+          <div class="sub">Gare de Lyon &rarr; Basel SBB &bull; 3:26 PM</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">PNR</span><span class="detail-value"><span class="ref-code">97QX5E</span></span></div>
+        <div class="detail-row"><span class="detail-label">Train</span><span class="detail-value">TGV Lyria 9213 &bull; 1st Class</span></div>
+        <div class="detail-row"><span class="detail-label">Carriage</span><span class="detail-value">13 &bull; Seats 368, 369, 371, 372</span></div>
+        <div class="detail-row"><span class="detail-label">Tickets</span><span class="detail-value">4x PDF eTickets (Trainline)</span></div>
+        <div class="detail-note warn">&#9888;&#65039; Arrives Basel 3:26 PM. Wengen check-in 4 PM. Allow 2+ hrs Basel &rarr; Wengen. Basel &rarr; Wengen rail NOT YET BOOKED.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-transit">&#128647;</div>
+        <div class="card-label">
+          <div class="date">Jun 23 &bull; Afternoon</div>
+          <div class="title">Rail: Basel &rarr; Wengen</div>
+          <div class="sub" style="color:#c0392b; font-weight:600;">&#10060; NOT YET BOOKED</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-note warn">Route: Basel SBB &rarr; Interlaken Ost &rarr; Lauterbrunnen &rarr; cog railway &rarr; Wengen. Wengen is car-free; final leg is always the cog railway. Must arrive after 4:00 PM check-in. TGV arrives Basel 3:26 PM &mdash; this will be tight. Book ASAP via SBB (Swiss Federal Railways).</div>
+      </div>
+    </div>
+
+    <div class="day-divider"><span class="day-label">Jun 23–27 &bull; Wengen</span><hr></div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-swiss">&#127956;</div>
+        <div class="card-label">
+          <div class="date">Jun 23–27 &bull; 4 nights</div>
+          <div class="title">Wengen, Switzerland</div>
+          <div class="sub">Racers Retreat 5 &bull; Airbnb</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value">Uf der Blatten 1208b, Wengen 3823</span></div>
+        <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">After 4:00 PM Jun 23</span></div>
+        <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 27 by 10:00 AM</span></div>
+        <div class="detail-row"><span class="detail-label">Airbnb ref</span><span class="detail-value"><span class="ref-code">HMS9JARNF9</span></span></div>
+        <div class="detail-row"><span class="detail-label">Host</span><span class="detail-value">Rachel &bull; +41 79 255 37 82</span></div>
+        <div class="detail-note warn">&#128683; No smoke or CO alarm reported. Bring portable detector.<br><br>&#128179; $1,675.87 due Jun 8 (Apple Pay).<br><br>&#9889; Switzerland may require guest registration with local authorities.</div>
+      </div>
+    </div>
+
+    <div class="day-divider"><span class="day-label">Sat Jun 27</span><hr></div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-transit">&#9992;&#65039;</div>
+        <div class="card-label">
+          <div class="date">Jun 27 &bull; Checkout 10 AM</div>
+          <div class="title">Fly Home: ZRH &rarr; Richmond</div>
+          <div class="sub">Departs 12:40 PM &bull; Allow 2.5h Wengen &rarr; ZRH</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Confirmation</span><span class="detail-value"><span class="ref-code">HXZFDY</span></span></div>
+        <div class="detail-row"><span class="detail-label">ZRH &rarr; JFK</span><span class="detail-value">Delta 53 &bull; 12:40–3:47 PM &bull; Seats 46F/G, 47F/G</span></div>
+        <div class="detail-row"><span class="detail-label">Layover JFK</span><span class="detail-value">5h 33m</span></div>
+        <div class="detail-row"><span class="detail-label">JFK &rarr; RIC</span><span class="detail-value">Delta 4659 &bull; 9:20–11:07 PM &bull; Seats 11A-D</span></div>
+        <div class="detail-note warn">&#9200; Checkout Wengen by 10 AM. ~2.5h travel to ZRH. Departs 12:40 PM &mdash; do not linger.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════ FLIGHTS ═══════════════ -->
+  <div id="page-flights" class="page">
+    <div class="section-title">Outbound &bull; Jun 10–11</div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-transit">&#9992;&#65039;</div>
+        <div class="card-label">
+          <div class="title">RIC &rarr; Edinburgh (EDI)</div>
+          <div class="sub">Delta &bull; Conf: HXZFDY</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="leg">
+          <div class="leg-times">
+            <div class="leg-dep">5:05 PM</div>
+            <div class="leg-route">Delta 5301 &bull; RIC</div>
+          </div>
+          <div class="leg-arrow">&#8594;</div>
+          <div class="leg-dest">
+            <div class="leg-arr">6:41 PM</div>
+            <div class="leg-route">JFK</div>
+          </div>
+          <div class="leg-duration">1h 36m</div>
+        </div>
+        <div class="layover-bar">&#128339; 2h 34m layover at JFK</div>
+        <div class="leg">
+          <div class="leg-times">
+            <div class="leg-dep">9:15 PM</div>
+            <div class="leg-route">Delta 208 &bull; JFK</div>
+          </div>
+          <div class="leg-arrow">&#8594;</div>
+          <div class="leg-dest">
+            <div class="leg-arr">9:20 AM +1</div>
+            <div class="leg-route">EDI &bull; Jun 11</div>
+          </div>
+          <div class="leg-duration">7h 5m</div>
+        </div>
+        <div class="detail-row" style="margin-top:10px"><span class="detail-label">Seats RIC–JFK</span><span class="detail-value">11A, 11B, 11C, 11D</span></div>
+        <div class="detail-row"><span class="detail-label">Seats JFK–EDI</span><span class="detail-value">41F, 41G, 42F, 42G</span></div>
+        <div class="detail-row"><span class="detail-label">Fare</span><span class="detail-value">Economy Main Classic &bull; 1 free bag</span></div>
+        <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">73353733119455</span></span></div>
+      </div>
+    </div>
+
+    <div class="section-title">Return &bull; Jun 27</div>
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-transit">&#9992;&#65039;</div>
+        <div class="card-label">
+          <div class="title">Zürich (ZRH) &rarr; RIC</div>
+          <div class="sub">Delta &bull; Conf: HXZFDY</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="leg">
+          <div class="leg-times">
+            <div class="leg-dep">12:40 PM</div>
+            <div class="leg-route">Delta 53 &bull; ZRH</div>
+          </div>
+          <div class="leg-arrow">&#8594;</div>
+          <div class="leg-dest">
+            <div class="leg-arr">3:47 PM</div>
+            <div class="leg-route">JFK</div>
+          </div>
+          <div class="leg-duration">9h 7m</div>
+        </div>
+        <div class="layover-bar">&#128339; 5h 33m layover at JFK</div>
+        <div class="leg">
+          <div class="leg-times">
+            <div class="leg-dep">9:20 PM</div>
+            <div class="leg-route">Delta 4659 &bull; JFK</div>
+          </div>
+          <div class="leg-arrow">&#8594;</div>
+          <div class="leg-dest">
+            <div class="leg-arr">11:07 PM</div>
+            <div class="leg-route">RIC</div>
+          </div>
+          <div class="leg-duration">1h 47m</div>
+        </div>
+        <div class="detail-row" style="margin-top:10px"><span class="detail-label">Seats ZRH–JFK</span><span class="detail-value">46F, 46G, 47F, 47G</span></div>
+        <div class="detail-row"><span class="detail-label">Seats JFK–RIC</span><span class="detail-value">11A, 11B, 11C, 11D</span></div>
+        <div class="detail-note warn">&#9200; Wengen checkout 10 AM. Allow ~2.5h to reach ZRH.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ TRAINS ═══════════════ -->
+  <div id="page-trains" class="page">
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-transit">&#128646;</div>
+        <div class="card-label">
+          <div class="date">Sun Jun 14</div>
+          <div class="title">Edinburgh &rarr; London</div>
+          <div class="sub">LNER &bull; <span class="ref-code" style="font-size:0.85rem">26SYHJJIU0</span></div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">11:00 AM Edinburgh Waverley</span></div>
+        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">3:11 PM London Kings Cross</span></div>
+        <div class="detail-row"><span class="detail-label">Duration</span><span class="detail-value">~4h 11m</span></div>
+        <div class="detail-row"><span class="detail-label">Seats</span><span class="detail-value">Coach G &mdash; 55, 56, 57, 58</span></div>
+        <div class="detail-row"><span class="detail-label">Ticket type</span><span class="detail-value">LNER Family Single (2A + 2C)</span></div>
+        <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">£96.50</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-transit">&#128646;</div>
+        <div class="card-label">
+          <div class="date">Fri Jun 19</div>
+          <div class="title">London &rarr; Paris (Eurostar)</div>
+          <div class="sub">PNR: <span class="ref-code" style="font-size:0.85rem">CM4NJM</span> <span class="badge badge-warn">Action needed</span></div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">10:31 AM St Pancras International</span></div>
+        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">1:50 PM Gare du Nord</span></div>
+        <div class="detail-row"><span class="detail-label">Class</span><span class="detail-value">Standard &bull; Coach 4 &bull; Seats 4, 3 (+2)</span></div>
+        <div class="detail-note warn">&#9888;&#65039; Must complete passenger information at eurostar.com or in the Eurostar app before tickets can be accessed.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-transit">&#128646;</div>
+        <div class="card-label">
+          <div class="date">Tue Jun 23</div>
+          <div class="title">Paris &rarr; Basel (TGV)</div>
+          <div class="sub">PNR: <span class="ref-code" style="font-size:0.85rem">97QX5E</span></div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">12:22 PM Gare de Lyon</span></div>
+        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">3:26 PM Basel SBB</span></div>
+        <div class="detail-row"><span class="detail-label">Train</span><span class="detail-value">TGV Lyria 9213</span></div>
+        <div class="detail-row"><span class="detail-label">Class</span><span class="detail-value">1st &bull; Carriage 13</span></div>
+        <div class="detail-row"><span class="detail-label">Seats</span><span class="detail-value">368 (aisle), 369 (window), 371 (aisle), 372 (window) — upstairs</span></div>
+        <div class="detail-row"><span class="detail-label">Invoice</span><span class="detail-value"><span class="ref-code">768947736650</span></span></div>
+        <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">$477.50</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-swiss">&#128647;</div>
+        <div class="card-label">
+          <div class="date">Tue Jun 23</div>
+          <div class="title">Basel &rarr; Wengen</div>
+          <div class="sub" style="color:#c0392b; font-weight:600;">&#10060; NOT YET BOOKED</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-note warn">Route: Basel SBB &rarr; Interlaken Ost &rarr; Lauterbrunnen &rarr; cog railway &rarr; Wengen.<br><br>Wengen is car-free. The cog railway from Lauterbrunnen is the only way in.<br><br>TGV arrives Basel at 3:26 PM. Wengen check-in after 4:00 PM. Journey takes ~2h — this will be tight. Book via sbb.ch (Swiss Federal Railways).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ STAYS ═══════════════ -->
+  <div id="page-stays" class="page">
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-edinburgh">&#127956;</div>
+        <div class="card-label">
+          <div class="date">Jun 11–14 &bull; 3 nights</div>
+          <div class="title">Edinburgh — Brewery Apt</div>
+          <div class="sub">Campbell's Close 10, EH8 8JJ</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">After 3:00 PM (no later than 8 PM)</span></div>
+        <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 14 by 10:00 AM</span></div>
+        <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">S8J49WS84NV5</span></span></div>
+        <div class="detail-row"><span class="detail-label">Host</span><span class="detail-value">Francesco Morgante</span></div>
+        <div class="detail-row"><span class="detail-label">Host phone</span><span class="detail-value">+44 20 3778 2170</span></div>
+        <div class="detail-row"><span class="detail-label">Host email</span><span class="detail-value">reservations.scotland@joivy.com</span></div>
+        <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">$1,555.28</span></div>
+        <div class="detail-note warn">&#9888;&#65039; If check-in instructions not received by Jun 8, contact Francesco directly.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-london">&#127968;</div>
+        <div class="card-label">
+          <div class="date">Jun 14–19 &bull; 5 nights</div>
+          <div class="title">London — Eight Apartments</div>
+          <div class="sub">3 King John Court, EC2A 3EZ</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">From 3:00 PM (ends 8:00 PM)</span></div>
+        <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 19 by 10:00 AM</span></div>
+        <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">72073826626599</span></span></div>
+        <div class="detail-row"><span class="detail-label">Hotel ref</span><span class="detail-value"><span class="ref-code">EXP-r2NZ04QA</span></span></div>
+        <div class="detail-row"><span class="detail-label">Prepaid</span><span class="detail-value">$2,776.27</span></div>
+        <div class="detail-row"><span class="detail-label">Due at property</span><span class="detail-value">$135.21 + GBP 500 deposit + GBP 100 cleaning</span></div>
+        <div class="detail-row"><span class="detail-label">Min check-in age</span><span class="detail-value">25</span></div>
+        <div class="detail-note warn">&#9888;&#65039; No front desk. Contact property 48h before arrival (by Jun 12). Online registration + photo ID required.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-paris">&#127968;</div>
+        <div class="card-label">
+          <div class="date">Jun 19–23 &bull; 4 nights</div>
+          <div class="title">Paris — Chic Parisian Apt</div>
+          <div class="sub">38 Rue Étienne Marcel, 75002</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">From 3:00 PM Jun 19</span></div>
+        <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 23 by 11:00 AM</span></div>
+        <div class="detail-row"><span class="detail-label">Vrbo ref</span><span class="detail-value"><span class="ref-code">HA-YF8T78</span></span></div>
+        <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">73447654569018</span></span></div>
+        <div class="detail-row"><span class="detail-label">Host</span><span class="detail-value">Nicolas &bull; +1 877 228 3145</span></div>
+        <div class="detail-row"><span class="detail-label">Total</span><span class="detail-value">$2,777.14 + $3,000 deposit</span></div>
+        <div class="detail-note warn">&#9888;&#65039; Confirm $4,134.98 charged (due May 20). Check-in instructions arrive Jun 16. Non-refundable.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-swiss">&#127956;</div>
+        <div class="card-label">
+          <div class="date">Jun 23–27 &bull; 4 nights</div>
+          <div class="title">Wengen — Racers Retreat 5</div>
+          <div class="sub">Uf der Blatten 1208b, Wengen 3823</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">After 4:00 PM Jun 23</span></div>
+        <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 27 by 10:00 AM</span></div>
+        <div class="detail-row"><span class="detail-label">Airbnb ref</span><span class="detail-value"><span class="ref-code">HMS9JARNF9</span></span></div>
+        <div class="detail-row"><span class="detail-label">Host Rachel</span><span class="detail-value">+41 79 255 37 82</span></div>
+        <div class="detail-row"><span class="detail-label">Total</span><span class="detail-value">$3,264.27</span></div>
+        <div class="detail-row"><span class="detail-label">Remaining</span><span class="detail-value">$1,675.87 due Jun 8 (Apple Pay)</span></div>
+        <div class="detail-note warn">&#128683; No smoke or CO alarm. Bring portable detector.<br><br>&#9889; Switzerland may require guest registration (name, DOB, passport).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ ACTIVITIES ═══════════════ -->
+  <div id="page-activities" class="page">
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-london">&#127981;</div>
+        <div class="card-label">
+          <div class="date">Sun Jun 14 &bull; 6:30 PM</div>
+          <div class="title">Shakespeare's Globe</div>
+          <div class="sub">A Midsummer Night's Dream</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Order</span><span class="detail-value"><span class="ref-code">5347986</span></span></div>
+        <div class="detail-row"><span class="detail-label">Type</span><span class="detail-value">Standing yard &bull; Row C &bull; Seats 23–26</span></div>
+        <div class="detail-row"><span class="detail-label">Pickup</span><span class="detail-value">Box Office with order confirmation</span></div>
+        <div class="detail-row"><span class="detail-label">eTickets</span><span class="detail-value">Emailed Jun 13</span></div>
+        <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">£63.00 incl. interval drinks</span></div>
+        <div class="detail-note">
+          Interval pre-orders: 1x Pimm's (£7.50) &bull; 1x Pale Ale (£6.50) &bull; 2x Lemonade (£3.00 ea)
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-london">&#127869;&#65039;</div>
+        <div class="card-label">
+          <div class="date">Wed Jun 17 &bull; 8:00 PM</div>
+          <div class="title">The Jugged Hare</div>
+          <div class="sub">49 Chiswell St, EC1Y 4SA</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">DMN-16952452743</span></span></div>
+        <div class="detail-row"><span class="detail-label">Time</span><span class="detail-value">8:00–11:00 PM</span></div>
+        <div class="detail-row"><span class="detail-label">Party</span><span class="detail-value">4 people</span></div>
+        <div class="detail-row"><span class="detail-label">Min spend</span><span class="detail-value">£120.00 on the day</span></div>
+        <div class="detail-note">Cashless venue — card/contactless only. World Cup Collection booking.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-paris">&#9972;&#65039;</div>
+        <div class="card-label">
+          <div class="date">Fri Jun 19</div>
+          <div class="title">Seine Cruise — Bateaux Parisiens</div>
+          <div class="sub">1 hour &bull; Eiffel Tower departure</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">73465019743842</span></span></div>
+        <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value">Port de la Bourdonnais, 75007</span></div>
+        <div class="detail-row"><span class="detail-label">Tickets</span><span class="detail-value">4 vouchers &bull; Paul Sanders</span></div>
+        <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">$44.13</span></div>
+        <div class="detail-note">Confirm exact cruise time on Expedia voucher. Eurostar arrives 1:50 PM same day.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ REFS ═══════════════ -->
+  <div id="page-refs" class="page">
+    <div class="section-title">All Booking References</div>
+    <div class="card">
+      <div class="card-body" style="display:block; padding-top:14px;">
+        <table class="ref-table">
+          <thead>
+            <tr><th>Booking</th><th>Reference</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Delta Flights</td><td>HXZFDY<br>Expedia #73353733119455</td></tr>
+            <tr><td>LNER EDI→LDN</td><td>26SYHJJIU0</td></tr>
+            <tr><td>Eurostar LDN→CDG</td><td>CM4NJM</td></tr>
+            <tr><td>TGV Paris→Basel</td><td>97QX5E<br>Invoice 768947736650</td></tr>
+            <tr><td>Edinburgh Brewery Apt</td><td>S8J49WS84NV5</td></tr>
+            <tr><td>London Eight Apts</td><td>EXP-r2NZ04QA<br>Expedia #72073826626599</td></tr>
+            <tr><td>Paris Chic Apt</td><td>HA-YF8T78<br>Expedia #73447654569018</td></tr>
+            <tr><td>Wengen Airbnb</td><td>HMS9JARNF9</td></tr>
+            <tr><td>Shakespeare's Globe</td><td>Order 5347986</td></tr>
+            <tr><td>Jugged Hare</td><td>DMN-16952452743</td></tr>
+            <tr><td>Seine Cruise</td><td>Expedia #73465019743842</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section-title">Host &amp; Venue Contacts</div>
+    <div class="card">
+      <div class="card-body" style="display:block; padding-top:14px;">
+        <table class="ref-table">
+          <thead>
+            <tr><th>Who</th><th>Contact</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Edinburgh host (Francesco)</td><td>+44 20 3778 2170<br>reservations.scotland@joivy.com</td></tr>
+            <tr><td>Paris host (Nicolas)</td><td>+1 877 228 3145</td></tr>
+            <tr><td>Wengen host (Rachel)</td><td>+41 79 255 37 82</td></tr>
+            <tr><td>Bateaux Parisiens</td><td>Bpccota.Fr.FR@sodexo.com</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Sanders Europe 2026 &bull; Last updated Jun 6, 2026
+</footer>
+
+<script>
+  function toggleCard(header) {
+    header.parentElement.classList.toggle('open');
+  }
+
+  const navLinks = document.querySelectorAll('nav a');
+  const pages = document.querySelectorAll('.page');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = link.dataset.page;
+      navLinks.forEach(l => l.classList.remove('active'));
+      pages.forEach(p => p.classList.remove('active'));
+      link.classList.add('active');
+      document.getElementById('page-' + target).classList.add('active');
+      window.scrollTo(0, 0);
+    });
+  });
+</script>
+
+</body>
+</html>
