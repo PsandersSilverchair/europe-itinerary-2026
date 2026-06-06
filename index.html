@@ -381,6 +381,18 @@
     }
     .day-divider hr { flex: 1; border: none; border-top: 1px solid #ddd; }
 
+    /* ── MAP LINK ── */
+    .map-link {
+      color: #1a6fbf;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-weight: 600;
+    }
+    .map-link:hover { text-decoration: underline; }
+    .map-link::before { content: "📍"; font-size: 0.9em; }
+
     /* ── SECTION PAGES ── */
     .page { display: none; }
     .page.active { display: block; }
@@ -557,7 +569,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
-        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value">Campbell's Close 10, EH8 8JJ</span></div>
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Campbell%27s+Close+10+Edinburgh+EH8+8JJ" target="_blank" rel="noopener">Campbell's Close 10, EH8 8JJ</a></span></div>
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">After 3:00 PM (no later than 8 PM)</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Sun Jun 14 by 10:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">S8J49WS84NV5</span></span></div>
@@ -579,8 +591,8 @@
       </div>
       <div class="card-body">
         <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">26SYHJJIU0</span></span></div>
-        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">11:00 AM Edinburgh Waverley</span></div>
-        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">3:11 PM London Kings Cross</span></div>
+        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">11:00 AM &bull; <a class="map-link" href="https://maps.google.com/?q=Edinburgh+Waverley+Station+Edinburgh" target="_blank" rel="noopener">Edinburgh Waverley</a></span></div>
+        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">3:11 PM &bull; <a class="map-link" href="https://maps.google.com/?q=London+Kings+Cross+Station" target="_blank" rel="noopener">London Kings Cross</a></span></div>
         <div class="detail-row"><span class="detail-label">Seats</span><span class="detail-value">Coach G &bull; 55, 56, 57, 58</span></div>
       </div>
     </div>
@@ -596,6 +608,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Shakespeare%27s+Globe+New+Globe+Walk+London+SE1+9DT" target="_blank" rel="noopener">New Globe Walk, SE1 9DT</a></span></div>
         <div class="detail-row"><span class="detail-label">Order</span><span class="detail-value"><span class="ref-code">5347986</span></span></div>
         <div class="detail-row"><span class="detail-label">Seats</span><span class="detail-value">Yard, Row C, Seats 23–26</span></div>
         <div class="detail-row"><span class="detail-label">Pickup</span><span class="detail-value">Box Office &bull; eTickets emailed Jun 13</span></div>
@@ -615,7 +628,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
-        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value">3 King John Court, EC2A 3EZ</span></div>
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=3+King+John+Court+London+EC2A+3EZ" target="_blank" rel="noopener">3 King John Court, EC2A 3EZ</a></span></div>
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">From 3:00 PM (ends 8:00 PM)</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Fri Jun 19 by 10:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">72073826626599</span></span></div>
@@ -637,6 +650,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=49+Chiswell+Street+London+EC1Y+4SA" target="_blank" rel="noopener">49 Chiswell St, EC1Y 4SA</a></span></div>
         <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">DMN-16952452743</span></span></div>
         <div class="detail-row"><span class="detail-label">Time</span><span class="detail-value">8:00–11:00 PM &bull; 4 people</span></div>
         <div class="detail-row"><span class="detail-label">Min spend</span><span class="detail-value">£120.00 on the day</span></div>
@@ -657,8 +671,8 @@
       </div>
       <div class="card-body">
         <div class="detail-row"><span class="detail-label">PNR</span><span class="detail-value"><span class="ref-code">CM4NJM</span></span></div>
-        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">10:31 AM London St Pancras</span></div>
-        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">1:50 PM Paris Gare du Nord</span></div>
+        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">10:31 AM &bull; <a class="map-link" href="https://maps.google.com/?q=London+St+Pancras+International+Station" target="_blank" rel="noopener">St Pancras International</a></span></div>
+        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">1:50 PM &bull; <a class="map-link" href="https://maps.google.com/?q=Paris+Gare+du+Nord" target="_blank" rel="noopener">Paris Gare du Nord</a></span></div>
         <div class="detail-row"><span class="detail-label">Class</span><span class="detail-value">Standard &bull; Coach 4 &bull; Seats 4, 3 (+2)</span></div>
         <div class="detail-note warn">&#9888;&#65039; Complete passenger info at eurostar.com before tickets unlock.</div>
       </div>
@@ -676,7 +690,7 @@
       </div>
       <div class="card-body">
         <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">73465019743842</span></span></div>
-        <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value">Port de la Bourdonnais, 75007</span></div>
+        <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Port+de+la+Bourdonnais+Paris+75007" target="_blank" rel="noopener">Port de la Bourdonnais, 75007</a></span></div>
         <div class="detail-note">Confirm exact departure time on Expedia voucher.</div>
       </div>
     </div>
@@ -693,7 +707,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
-        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value">38 Rue Étienne Marcel, 75002</span></div>
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=38+Rue+Etienne+Marcel+Paris+75002" target="_blank" rel="noopener">38 Rue Étienne Marcel, 75002</a></span></div>
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">From 3:00 PM Jun 19</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 23 by 11:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Vrbo ref</span><span class="detail-value"><span class="ref-code">HA-YF8T78</span></span></div>
@@ -715,6 +729,8 @@
       </div>
       <div class="card-body">
         <div class="detail-row"><span class="detail-label">PNR</span><span class="detail-value"><span class="ref-code">97QX5E</span></span></div>
+        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Paris+Gare+de+Lyon" target="_blank" rel="noopener">Paris Gare de Lyon</a></span></div>
+        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Basel+SBB+Centralbahnplatz+1+Basel" target="_blank" rel="noopener">Basel SBB</a></span></div>
         <div class="detail-row"><span class="detail-label">Train</span><span class="detail-value">TGV Lyria 9213 &bull; 1st Class</span></div>
         <div class="detail-row"><span class="detail-label">Carriage 13</span><span class="detail-value">Seats 368, 369, 371, 372 (upstairs)</span></div>
       </div>
@@ -731,7 +747,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
-        <div class="detail-note warn">Route: Basel SBB &rarr; Interlaken Ost &rarr; Lauterbrunnen &rarr; cog railway &rarr; Wengen. TGV arrives 3:26 PM — check-in 4 PM. Book via sbb.ch.</div>
+        <div class="detail-note warn">Route: <a class="map-link" href="https://maps.google.com/?q=Basel+SBB+Centralbahnplatz+1+Basel" target="_blank" rel="noopener">Basel SBB</a> &rarr; Interlaken Ost &rarr; <a class="map-link" href="https://maps.google.com/?q=Lauterbrunnen+Station+3822" target="_blank" rel="noopener">Lauterbrunnen</a> &rarr; cog railway &rarr; <a class="map-link" href="https://maps.google.com/?q=Wengen+3823+Switzerland" target="_blank" rel="noopener">Wengen</a>. TGV arrives 3:26 PM — check-in 4 PM. Book via sbb.ch.</div>
       </div>
     </div>
 
@@ -747,7 +763,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
-        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value">Uf der Blatten 1208b, Wengen 3823</span></div>
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Uf+der+Blatten+1208b+Wengen+3823" target="_blank" rel="noopener">Uf der Blatten 1208b, Wengen 3823</a></span></div>
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">After 4:00 PM Jun 23</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 27 by 10:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Airbnb ref</span><span class="detail-value"><span class="ref-code">HMS9JARNF9</span></span></div>
@@ -769,6 +785,7 @@
       </div>
       <div class="card-body">
         <div class="detail-row"><span class="detail-label">Confirmation</span><span class="detail-value"><span class="ref-code">HXZFDY</span></span></div>
+        <div class="detail-row"><span class="detail-label">Airport</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Zurich+Airport+ZRH+Kloten" target="_blank" rel="noopener">Zürich Airport (ZRH)</a></span></div>
         <div class="detail-row"><span class="detail-label">ZRH &rarr; JFK</span><span class="detail-value">Delta 53 &bull; 12:40–3:47 PM &bull; Seats 46F/G, 47F/G</span></div>
         <div class="detail-row"><span class="detail-label">Layover JFK</span><span class="detail-value">5h 33m</span></div>
         <div class="detail-row"><span class="detail-label">JFK &rarr; RIC</span><span class="detail-value">Delta 4659 &bull; 9:20–11:07 PM &bull; Seats 11A-D</span></div>
@@ -834,7 +851,8 @@
           <div class="leg-dest"><div class="leg-arr">11:07 PM</div><div class="leg-route">RIC</div></div>
           <div class="leg-duration">1h 47m</div>
         </div>
-        <div class="detail-row" style="margin-top:10px"><span class="detail-label">Seats ZRH–JFK</span><span class="detail-value">46F, 46G, 47F, 47G</span></div>
+        <div class="detail-row" style="margin-top:10px"><span class="detail-label">Airport</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Zurich+Airport+ZRH+Kloten" target="_blank" rel="noopener">Zürich Airport (ZRH)</a></span></div>
+        <div class="detail-row"><span class="detail-label">Seats ZRH–JFK</span><span class="detail-value">46F, 46G, 47F, 47G</span></div>
         <div class="detail-row"><span class="detail-label">Seats JFK–RIC</span><span class="detail-value">11A, 11B, 11C, 11D</span></div>
         <div class="detail-note warn">&#9200; Wengen checkout 10 AM. Allow ~2.5h to reach ZRH.</div>
       </div>
@@ -854,8 +872,8 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
-        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">11:00 AM Edinburgh Waverley</span></div>
-        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">3:11 PM London Kings Cross</span></div>
+        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">11:00 AM &bull; <a class="map-link" href="https://maps.google.com/?q=Edinburgh+Waverley+Station+Edinburgh" target="_blank" rel="noopener">Edinburgh Waverley</a></span></div>
+        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">3:11 PM &bull; <a class="map-link" href="https://maps.google.com/?q=London+Kings+Cross+Station" target="_blank" rel="noopener">London Kings Cross</a></span></div>
         <div class="detail-row"><span class="detail-label">Seats</span><span class="detail-value">Coach G &mdash; 55, 56, 57, 58</span></div>
         <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">£96.50</span></div>
       </div>
@@ -872,8 +890,8 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
-        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">10:31 AM St Pancras</span></div>
-        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">1:50 PM Gare du Nord</span></div>
+        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">10:31 AM &bull; <a class="map-link" href="https://maps.google.com/?q=London+St+Pancras+International+Station" target="_blank" rel="noopener">St Pancras International</a></span></div>
+        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">1:50 PM &bull; <a class="map-link" href="https://maps.google.com/?q=Paris+Gare+du+Nord" target="_blank" rel="noopener">Paris Gare du Nord</a></span></div>
         <div class="detail-row"><span class="detail-label">Class</span><span class="detail-value">Standard &bull; Coach 4 &bull; Seats 4, 3 (+2)</span></div>
         <div class="detail-note warn">&#9888;&#65039; Complete passenger info at eurostar.com before tickets unlock.</div>
       </div>
@@ -890,8 +908,8 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
-        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">12:22 PM Gare de Lyon</span></div>
-        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">3:26 PM Basel SBB</span></div>
+        <div class="detail-row"><span class="detail-label">Departs</span><span class="detail-value">12:22 PM &bull; <a class="map-link" href="https://maps.google.com/?q=Paris+Gare+de+Lyon" target="_blank" rel="noopener">Paris Gare de Lyon</a></span></div>
+        <div class="detail-row"><span class="detail-label">Arrives</span><span class="detail-value">3:26 PM &bull; <a class="map-link" href="https://maps.google.com/?q=Basel+SBB+Centralbahnplatz+1+Basel" target="_blank" rel="noopener">Basel SBB</a></span></div>
         <div class="detail-row"><span class="detail-label">Train</span><span class="detail-value">TGV Lyria 9213 &bull; 1st Class &bull; Carriage 13</span></div>
         <div class="detail-row"><span class="detail-label">Seats</span><span class="detail-value">368, 369, 371, 372 (upstairs)</span></div>
         <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">$477.50</span></div>
@@ -909,7 +927,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
-        <div class="detail-note warn">Route: Basel SBB &rarr; Interlaken Ost &rarr; Lauterbrunnen &rarr; cog railway &rarr; Wengen. Book via sbb.ch.</div>
+        <div class="detail-note warn">Route: <a class="map-link" href="https://maps.google.com/?q=Basel+SBB+Centralbahnplatz+1+Basel" target="_blank" rel="noopener">Basel SBB</a> &rarr; Interlaken Ost &rarr; <a class="map-link" href="https://maps.google.com/?q=Lauterbrunnen+Station+3822" target="_blank" rel="noopener">Lauterbrunnen</a> &rarr; cog railway &rarr; <a class="map-link" href="https://maps.google.com/?q=Wengen+3823+Switzerland" target="_blank" rel="noopener">Wengen</a>. Book via sbb.ch.</div>
       </div>
     </div>
   </div>
@@ -927,6 +945,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Campbell%27s+Close+10+Edinburgh+EH8+8JJ" target="_blank" rel="noopener">Campbell's Close 10, EH8 8JJ</a></span></div>
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">After 3 PM (by 8 PM)</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 14 by 10:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">S8J49WS84NV5</span></span></div>
@@ -947,6 +966,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=3+King+John+Court+London+EC2A+3EZ" target="_blank" rel="noopener">3 King John Court, EC2A 3EZ</a></span></div>
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">From 3 PM (by 8 PM)</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 19 by 10:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">72073826626599</span></span></div>
@@ -968,6 +988,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=38+Rue+Etienne+Marcel+Paris+75002" target="_blank" rel="noopener">38 Rue Étienne Marcel, 75002</a></span></div>
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">From 3 PM Jun 19</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 23 by 11:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Vrbo ref</span><span class="detail-value"><span class="ref-code">HA-YF8T78</span></span></div>
@@ -989,6 +1010,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Uf+der+Blatten+1208b+Wengen+3823" target="_blank" rel="noopener">Uf der Blatten 1208b, Wengen 3823</a></span></div>
         <div class="detail-row"><span class="detail-label">Check-in</span><span class="detail-value">After 4 PM Jun 23</span></div>
         <div class="detail-row"><span class="detail-label">Checkout</span><span class="detail-value">Jun 27 by 10:00 AM</span></div>
         <div class="detail-row"><span class="detail-label">Airbnb ref</span><span class="detail-value"><span class="ref-code">HMS9JARNF9</span></span></div>
@@ -1013,6 +1035,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Shakespeare%27s+Globe+New+Globe+Walk+London+SE1+9DT" target="_blank" rel="noopener">New Globe Walk, SE1 9DT</a></span></div>
         <div class="detail-row"><span class="detail-label">Order</span><span class="detail-value"><span class="ref-code">5347986</span></span></div>
         <div class="detail-row"><span class="detail-label">Seats</span><span class="detail-value">Yard, Row C, Seats 23–26</span></div>
         <div class="detail-row"><span class="detail-label">Pickup</span><span class="detail-value">Box Office &bull; eTickets emailed Jun 13</span></div>
@@ -1031,6 +1054,7 @@
         <div class="card-meta"><div class="card-chevron">&#8250;</div></div>
       </div>
       <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Address</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=49+Chiswell+Street+London+EC1Y+4SA" target="_blank" rel="noopener">49 Chiswell St, EC1Y 4SA</a></span></div>
         <div class="detail-row"><span class="detail-label">Ref</span><span class="detail-value"><span class="ref-code">DMN-16952452743</span></span></div>
         <div class="detail-row"><span class="detail-label">Time</span><span class="detail-value">8:00–11:00 PM &bull; 4 people</span></div>
         <div class="detail-row"><span class="detail-label">Min spend</span><span class="detail-value">£120.00</span></div>
@@ -1050,7 +1074,7 @@
       </div>
       <div class="card-body">
         <div class="detail-row"><span class="detail-label">Expedia</span><span class="detail-value"><span class="ref-code">73465019743842</span></span></div>
-        <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value">Port de la Bourdonnais, 75007</span></div>
+        <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value"><a class="map-link" href="https://maps.google.com/?q=Port+de+la+Bourdonnais+Paris+75007" target="_blank" rel="noopener">Port de la Bourdonnais, 75007</a></span></div>
         <div class="detail-row"><span class="detail-label">Tickets</span><span class="detail-value">4 vouchers &bull; Paul Sanders</span></div>
         <div class="detail-row"><span class="detail-label">Paid</span><span class="detail-value">$44.13</span></div>
         <div class="detail-note">Confirm exact departure time on Expedia voucher.</div>
