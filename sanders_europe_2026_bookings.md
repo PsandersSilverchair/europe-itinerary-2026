@@ -50,6 +50,7 @@
 ### Return: Zürich → Richmond (Jun 27)
 - **Operator:** Delta
 - **Confirmation:** HXZFDY (same booking as outbound)
+- **⚠️ ITINERARY APP ERROR:** The interactive itinerary lists the ZRH departure as "1:35 PM" — this is WRONG. Confirmed departure is **12:40 PM**. The app code needs to be corrected.
 - **Leg 1 — Delta 53**
   - Departs: 12:40 PM Sat Jun 27 — Zürich (ZRH)
   - Arrives: 3:47 PM Sat Jun 27 — New York (JFK)
@@ -73,8 +74,8 @@
 - **Arrives:** 3:11 PM (London Kings Cross)
 - **Duration:** ~4h 11m
 - **Ticket type:** LNER Family Single (2 Adults + 2 Children)
-- **Seats:** Coach G, Seats 55, 56, 57, 58
-- **Total paid:** £96.50 (MasterCard ••••4671)
+- **Seats:** Coach G, Seats 58, 57, 55, 56 (ticket order: adult 58, adult 57, child 55, child 56)
+- **Total paid:** £96.50 (MasterCard ••••4671 — £101.50 fare minus £5.00 eVoucher LNRJ2-DJJUE-RXCLX-HXNNP-7VY7H)
 - **Tickets:** PDF eTickets (also in LNER My Bookings)
 - **Luggage:** Max 1 large suitcase + 1 carry-on bag + 1 small handbag per passenger
 
@@ -94,7 +95,7 @@
 - **PNR:** 97QX5E | **Invoice:** 768947736650
 - **Date:** Tuesday, June 23, 2026
 - **Departs:** 12:22 PM (Paris Gare de Lyon)
-- **Arrives:** 3:26 PM (Basel SBB)
+- **Arrives:** 3:26 PM / 15:26 (Basel SBB)
 - **Duration:** 3h 04m, direct | **Train:** TGV Lyria 9213
 - **Ticket type:** 4x SEMI FLEX PREMIÈRE (1st Class)
 - **Passengers:** Levi, Micah, Paul, Laura Sanders
@@ -177,11 +178,11 @@
 - **Checkout:** Sun Jun 14 by 10:00 AM
 - **Nights:** 3 | **Guests:** 2 adults, 2 children | **Beds:** 3 | **Capacity:** fits 4 guests
 - **Check-in instructions:** Host will email detailed instructions. If not received 72h before arrival (by Mon Jun 8), contact host directly.
-- **Pricing:** $476.40/night × 3 nights = $1,429.19 + $226.09 taxes/fees − $100.00 Capital One Travel Credit = **$1,555.28 USD**
+- **Pricing:** 3 nights = $1,429.19 + $226.09 taxes/fees − $100.00 Capital One Travel Credit = **$1,555.28 USD**
 - **Payments:**
   - Capital One Quicksilver MasterCard ••••0911: $10.52 rewards cash
   - MasterCard ••••4671 (Laura Sanders, exp 6/2030): $1,544.76
-- **Cancellation:** Free cancellation deadline was May 12, 2026. **DEADLINE PASSED — fully non-refundable.** Penalty for any changes/cancellation: $1,655.28.
+- **Cancellation:** Free cancellation deadline was May 12, 2026 at 1:00 AM BST. **DEADLINE PASSED — fully non-refundable.** Penalty for any changes/cancellation: $1,655.28.
 
 ---
 
