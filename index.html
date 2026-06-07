@@ -403,6 +403,24 @@
     .map-link:hover { text-decoration: underline; }
     .map-link::before { content: "📍"; font-size: 0.9em; }
 
+    /* ── IDEA CARDS (unbooked day suggestions) ── */
+    .card-ideas { border: 2px dashed #c8d8e8; }
+    .badge-idea { background: #ddeef8; color: #2a5f8a; }
+    .idea-row {
+      display: flex;
+      gap: 10px;
+      padding: 7px 0;
+      border-bottom: 1px solid #f0f4f8;
+      font-size: 0.88rem;
+      align-items: flex-start;
+    }
+    .idea-row:last-child { border-bottom: none; }
+    .idea-time { min-width: 78px; color: var(--muted); font-size: 0.82rem; flex-shrink: 0; padding-top: 2px; }
+    .idea-icon { min-width: 22px; text-align: center; }
+    .idea-body { flex: 1; }
+    .idea-title { font-weight: 600; font-size: 0.9rem; }
+    .idea-detail { font-size: 0.82rem; color: var(--muted); margin-top: 2px; line-height: 1.45; }
+
     /* ── SECTION PAGES ── */
     .page { display: none; }
     .page.active { display: block; }
@@ -588,6 +606,23 @@
       </div>
     </div>
 
+    <div class="card card-ideas">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-edinburgh" style="opacity:0.65">&#128161;</div>
+        <div class="card-label">
+          <div class="date">Thu Jun 11 &bull; Arrival Day</div>
+          <div class="title">Edinburgh — Arrival Ideas <span class="badge badge-idea">Ideas</span></div>
+          <div class="sub">Royal Mile &bull; Calton Hill</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="idea-row"><span class="idea-time">Morning</span><span class="idea-icon">&#128694;</span><div class="idea-body"><div class="idea-title">Wander the Royal Mile</div><div class="idea-detail">Easy no-agenda stroll. Pop into St Giles' Cathedral (free). Grab a pub lunch nearby.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Afternoon</span><span class="idea-icon">&#9968;&#65039;</span><div class="idea-body"><div class="idea-title">Calton Hill</div><div class="idea-detail">10 min walk from the Royal Mile. Short climb with panoramic city views — perfect on a jet-lag day.</div></div></div>
+        <div class="idea-row"><span class="idea-time">After tour</span><span class="idea-icon">&#127822;</span><div class="idea-body"><div class="idea-title">Early dinner &amp; bed</div><div class="idea-detail">Casual dinner close to the apartment. Early night — beat the jet lag!</div></div></div>
+      </div>
+    </div>
+
     <div class="card">
       <div class="card-header" onclick="toggleCard(this)">
         <div class="card-icon bg-edinburgh">&#128373;&#65039;</div>
@@ -605,6 +640,26 @@
         <div class="detail-row"><span class="detail-label">Tickets</span><span class="detail-value">2x Adult £28.50 &bull; 2x Child £21.00</span></div>
         <div class="detail-row"><span class="detail-label">Total paid</span><span class="detail-value">£99.00</span></div>
         <div class="detail-note">On the Royal Mile, across from St Giles Cathedral. Fully cashless. Lockers in courtyard. Download audio guide beforehand if wanted. Non-refundable; rebooking allowed up to 4 hrs before (£15 fee).</div>
+      </div>
+    </div>
+
+    <div class="day-divider" id="day-jun12"><span class="day-label">Fri Jun 12</span><hr></div>
+    <div class="card card-ideas">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-edinburgh" style="opacity:0.65">&#128161;</div>
+        <div class="card-label">
+          <div class="date">Fri Jun 12 &bull; Edinburgh</div>
+          <div class="title">Arthur's Seat, Castle &amp; Whisky <span class="badge badge-idea">Ideas</span></div>
+          <div class="sub">Arthur's Seat &bull; Edinburgh Castle &bull; Whisky Experience</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="idea-row"><span class="idea-time">9:00 AM</span><span class="idea-icon">&#129462;</span><div class="idea-body"><div class="idea-title">Arthur's Seat Hike + St Anthony's Chapel</div><div class="idea-detail">~2–2.5 hrs. Edinburgh's highest point (251m), ~45 min up. St Anthony's Chapel ruins on the way. Wear good sneakers.</div></div></div>
+        <div class="idea-row"><span class="idea-time">12:00 PM</span><span class="idea-icon">&#127869;&#65039;</span><div class="idea-body"><div class="idea-title">Lunch near the Royal Mile</div><div class="idea-detail">Head back to freshen up, grab lunch at a nearby pub.</div></div></div>
+        <div class="idea-row"><span class="idea-time">1:30 PM</span><span class="idea-icon">&#127984;</span><div class="idea-body"><div class="idea-title">Edinburgh Castle</div><div class="idea-detail">Allow 2–3 hours. Crown Jewels, Scottish history, great views. Book tickets in advance!</div></div></div>
+        <div class="idea-row"><span class="idea-time">4:30 PM</span><span class="idea-icon">&#129347;</span><div class="idea-body"><div class="idea-title">Scotch Whisky Experience</div><div class="idea-detail">Right next to Edinburgh Castle. Whole family welcome — kids get Irn Bru! ~75 min.</div></div></div>
+        <div class="idea-row"><span class="idea-time">7:00 PM</span><span class="idea-icon">&#127869;&#65039;</span><div class="idea-body"><div class="idea-title">Dinner on Grassmarket</div><div class="idea-detail">Lively area at the base of the castle — well earned after a big day!</div></div></div>
       </div>
     </div>
 
@@ -708,7 +763,61 @@
       </div>
     </div>
 
+    <div class="card card-ideas">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-london" style="opacity:0.65">&#128161;</div>
+        <div class="card-label">
+          <div class="date">Mon Jun 15 &bull; Hop-On Hop-Off stops</div>
+          <div class="title">Westminster &amp; South Bank <span class="badge badge-idea">Ideas</span></div>
+          <div class="sub">Buckingham Palace &bull; Westminster Abbey &bull; Covent Garden</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="idea-row"><span class="idea-time">10:30 AM</span><span class="idea-icon">&#128081;</span><div class="idea-body"><div class="idea-title">Changing of the Guard — Buckingham Palace</div><div class="idea-detail">Free! Arrive early. Ceremony ~10:43–11:45am. Best from Victoria Memorial steps or palace gates.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Afternoon</span><span class="idea-icon">&#9962;</span><div class="idea-body"><div class="idea-title">Westminster Abbey</div><div class="idea-detail">Queen Elizabeth's grave — on Levi's list! Book tickets in advance. Allow 1.5–2 hours.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Afternoon</span><span class="idea-icon">&#128348;</span><div class="idea-body"><div class="idea-title">Big Ben &amp; Westminster Bridge</div><div class="idea-detail">Right next to Westminster Abbey. Walk across for iconic Thames views.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Evening</span><span class="idea-icon">&#127914;</span><div class="idea-body"><div class="idea-title">Dinner at Covent Garden</div><div class="idea-detail">Street performers, great restaurants — easy on the Hop-On Hop-Off.</div></div></div>
+      </div>
+    </div>
+
+    <div class="day-divider" id="day-jun16"><span class="day-label">Tue Jun 16</span><hr></div>
+    <div class="card card-ideas">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-london" style="opacity:0.65">&#128161;</div>
+        <div class="card-label">
+          <div class="date">Tue Jun 16 &bull; London</div>
+          <div class="title">Tower of London &amp; South Bank <span class="badge badge-idea">Ideas</span></div>
+          <div class="sub">Tower of London &bull; Borough Market &bull; London Eye</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="idea-row"><span class="idea-time">Morning</span><span class="idea-icon">&#127984;</span><div class="idea-body"><div class="idea-title">Tower of London + Crown Jewels</div><div class="idea-detail">Book tickets in advance! Allow 2.5–3 hours. Beefeater guided tours included with admission.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Afternoon</span><span class="idea-icon">&#127751;</span><div class="idea-body"><div class="idea-title">Tower Bridge</div><div class="idea-detail">Walk across iconic Tower Bridge — stunning Thames views. Glass floor walkway worth doing!</div></div></div>
+        <div class="idea-row"><span class="idea-time">Afternoon</span><span class="idea-icon">&#127859;</span><div class="idea-body"><div class="idea-title">Borough Market</div><div class="idea-detail">One of London's best food markets — perfect for a grazing lunch. Open until ~5pm.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Evening</span><span class="idea-icon">&#127905;</span><div class="idea-body"><div class="idea-title">London Eye at sunset</div><div class="idea-detail">On Levi's wishlist! Book timed tickets in advance. Spectacular views at dusk.</div></div></div>
+      </div>
+    </div>
+
     <div class="day-divider" id="day-jun17"><span class="day-label">Wed Jun 17</span><hr></div>
+    <div class="card card-ideas">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-london" style="opacity:0.65">&#128161;</div>
+        <div class="card-label">
+          <div class="date">Wed Jun 17 &bull; Daytime</div>
+          <div class="title">Richmond, Notting Hill &amp; Kensington <span class="badge badge-idea">Ideas</span></div>
+          <div class="sub">Ted Lasso &bull; Portobello Rd &bull; Kensington Palace</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="idea-row"><span class="idea-time">Morning</span><span class="idea-icon">&#9917;</span><div class="idea-body"><div class="idea-title">Ted Lasso Filming Locations — Richmond</div><div class="idea-detail">Tube to Richmond (~35 min). Paved Court, Prince's Head/Crown &amp; Anchor, Richmond Green, Richmond Park. Allow 2–3 hours.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Afternoon</span><span class="idea-icon">&#127968;</span><div class="idea-body"><div class="idea-title">Notting Hill &amp; Portobello Road</div><div class="idea-detail">Colorful houses, famous market street, very photogenic.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Late afternoon</span><span class="idea-icon">&#128081;</span><div class="idea-body"><div class="idea-title">Kensington Palace &amp; Gardens</div><div class="idea-detail">Free to walk the gardens. Palace entry paid — worth it for the State Rooms.</div></div></div>
+      </div>
+    </div>
+
     <div class="card" id="card-jugged">
       <div class="card-header" onclick="toggleCard(this)">
         <div class="card-icon bg-london">&#127869;&#65039;</div>
@@ -806,6 +915,60 @@
       </div>
     </div>
 
+    <div class="day-divider" id="day-jun20"><span class="day-label">Sat Jun 20</span><hr></div>
+    <div class="card card-ideas">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-paris" style="opacity:0.65">&#128161;</div>
+        <div class="card-label">
+          <div class="date">Sat Jun 20 &bull; Paris</div>
+          <div class="title">The Louvre &amp; Le Marais <span class="badge badge-idea">Ideas</span></div>
+          <div class="sub">Louvre &bull; Tuileries &bull; Le Marais dinner</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="idea-row"><span class="idea-time">Morning</span><span class="idea-icon">&#128444;&#65039;</span><div class="idea-body"><div class="idea-title">Louvre Museum</div><div class="idea-detail">Book skip-the-line tickets! Allow 3 hours. Mona Lisa, Venus de Milo.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Afternoon</span><span class="idea-icon">&#127807;</span><div class="idea-body"><div class="idea-title">Tuileries Garden &amp; Palais Royal</div><div class="idea-detail">Stroll through the beautiful gardens connecting the Louvre to the rest of the city.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Evening</span><span class="idea-icon">&#127843;</span><div class="idea-body"><div class="idea-title">Dinner in Le Marais</div><div class="idea-detail">Charming historic neighborhood — great bistros and falafel on Rue des Rosiers.</div></div></div>
+      </div>
+    </div>
+
+    <div class="day-divider" id="day-jun21"><span class="day-label">Sun Jun 21</span><hr></div>
+    <div class="card card-ideas">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-paris" style="opacity:0.65">&#128161;</div>
+        <div class="card-label">
+          <div class="date">Sun Jun 21 &bull; Paris</div>
+          <div class="title">Eiffel Tower &amp; Mus&eacute;e d'Orsay <span class="badge badge-idea">Ideas</span></div>
+          <div class="sub">Eiffel Tower &bull; d'Orsay &bull; Bouillon Chartier</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="idea-row"><span class="idea-time">Morning</span><span class="idea-icon">&#128508;</span><div class="idea-body"><div class="idea-title">Eiffel Tower</div><div class="idea-detail">Book summit tickets well in advance! Go early to beat the crowds.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Afternoon</span><span class="idea-icon">&#127912;</span><div class="idea-body"><div class="idea-title">Mus&eacute;e d'Orsay</div><div class="idea-detail">Impressionist masterpieces — more manageable than the Louvre, beautiful building.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Evening</span><span class="idea-icon">&#127869;&#65039;</span><div class="idea-body"><div class="idea-title">Bouillon Chartier</div><div class="idea-detail">Classic Parisian brasserie — affordable, authentic, and memorable.</div></div></div>
+      </div>
+    </div>
+
+    <div class="day-divider" id="day-jun22"><span class="day-label">Mon Jun 22</span><hr></div>
+    <div class="card card-ideas">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-paris" style="opacity:0.65">&#128161;</div>
+        <div class="card-label">
+          <div class="date">Mon Jun 22 &bull; Paris</div>
+          <div class="title">Montmartre &amp; Champs-&Eacute;lys&eacute;es <span class="badge badge-idea">Ideas</span></div>
+          <div class="sub">Sacr&eacute;-C&oelig;ur &bull; Arc de Triomphe &bull; Final Paris dinner</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="idea-row"><span class="idea-time">Morning</span><span class="idea-icon">&#9962;</span><div class="idea-body"><div class="idea-title">Sacr&eacute;-C&oelig;ur &amp; Montmartre</div><div class="idea-detail">Wander the artists' quarter — great views of Paris from the top.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Afternoon</span><span class="idea-icon">&#127717;</span><div class="idea-body"><div class="idea-title">Champs-&Eacute;lys&eacute;es &amp; Arc de Triomphe</div><div class="idea-detail">Walk the famous avenue, climb the Arc for rooftop views.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Evening</span><span class="idea-icon">&#127769;</span><div class="idea-body"><div class="idea-title">Final Paris dinner</div><div class="idea-detail">Splurge on a nice bistro — last night in the City of Light!</div></div></div>
+      </div>
+    </div>
+
     <div class="day-divider" id="day-jun23"><span class="day-label">Tue Jun 23</span><hr></div>
     <div class="card" id="card-tgv">
       <div class="card-header" onclick="toggleCard(this)">
@@ -859,6 +1022,60 @@
         <div class="detail-row"><span class="detail-label">Airbnb ref</span><span class="detail-value"><span class="ref-code">HMS9JARNF9</span></span></div>
         <div class="detail-row"><span class="detail-label">Host Rachel</span><span class="detail-value"><a class="phone-link" href="tel:+41792553782">+41 79 255 37 82</a></span></div>
         <div class="detail-note warn">&#128683; No smoke/CO alarm — bring portable detector.</div>
+      </div>
+    </div>
+
+    <div class="day-divider" id="day-jun24"><span class="day-label">Wed Jun 24</span><hr></div>
+    <div class="card card-ideas">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-swiss" style="opacity:0.65">&#128161;</div>
+        <div class="card-label">
+          <div class="date">Wed Jun 24 &bull; Wengen</div>
+          <div class="title">Jungfraujoch &amp; Wengen Village <span class="badge badge-idea">Ideas</span></div>
+          <div class="sub">Top of Europe &bull; Village wander &bull; Fondue</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="idea-row"><span class="idea-time">Morning</span><span class="idea-icon">&#127956;</span><div class="idea-body"><div class="idea-title">Jungfraujoch — Top of Europe</div><div class="idea-detail">Book tickets well in advance! Cogwheel train up to 3,454m. Stunning glacier views.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Afternoon</span><span class="idea-icon">&#127968;</span><div class="idea-body"><div class="idea-title">Explore Wengen Village</div><div class="idea-detail">Car-free village — wander, shop, take in the Eiger, Mönch &amp; Jungfrau views.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Evening</span><span class="idea-icon">&#129472;</span><div class="idea-body"><div class="idea-title">Fondue dinner in Wengen</div><div class="idea-detail">You're in Switzerland — fondue is mandatory!</div></div></div>
+      </div>
+    </div>
+
+    <div class="day-divider" id="day-jun25"><span class="day-label">Thu Jun 25</span><hr></div>
+    <div class="card card-ideas">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-swiss" style="opacity:0.65">&#128161;</div>
+        <div class="card-label">
+          <div class="date">Thu Jun 25 &bull; Wengen</div>
+          <div class="title">Kleine Scheidegg &amp; M&auml;nnlichen <span class="badge badge-idea">Ideas</span></div>
+          <div class="sub">Scenic rail &bull; Royal Walk hike &bull; Alpenglow</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="idea-row"><span class="idea-time">Morning</span><span class="idea-icon">&#128670;</span><div class="idea-body"><div class="idea-title">Kleine Scheidegg</div><div class="idea-detail">Scenic cogwheel train ride with jaw-dropping Alpine panoramas.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Afternoon</span><span class="idea-icon">&#129461;</span><div class="idea-body"><div class="idea-title">M&auml;nnlichen Royal Walk</div><div class="idea-detail">Cable car up to Männlichen then the Royal Walk — an easy, stunning 2-hr hike with epic Eiger views.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Evening</span><span class="idea-icon">&#127748;</span><div class="idea-body"><div class="idea-title">Sunset from the chalet balcony</div><div class="idea-detail">Alpenglow on the Jungfrau — one of the great sights in Europe.</div></div></div>
+      </div>
+    </div>
+
+    <div class="day-divider" id="day-jun26"><span class="day-label">Fri Jun 26</span><hr></div>
+    <div class="card card-ideas">
+      <div class="card-header" onclick="toggleCard(this)">
+        <div class="card-icon bg-swiss" style="opacity:0.65">&#128161;</div>
+        <div class="card-label">
+          <div class="date">Fri Jun 26 &bull; Wengen</div>
+          <div class="title">Lauterbrunnen Valley <span class="badge badge-idea">Ideas</span></div>
+          <div class="sub">Staubbach Falls &bull; Tr&uuml;mmelbach &bull; Farewell dinner</div>
+        </div>
+        <div class="card-chevron">&#8250;</div>
+      </div>
+      <div class="card-body">
+        <div class="idea-row"><span class="idea-time">Morning</span><span class="idea-icon">&#128034;</span><div class="idea-body"><div class="idea-title">Lauterbrunnen Valley</div><div class="idea-detail">Day trip down to the valley — Staubbach Falls and Trümmelbach Falls (inside a mountain — spectacular!).</div></div></div>
+        <div class="idea-row"><span class="idea-time">Afternoon</span><span class="idea-icon">&#127968;</span><div class="idea-body"><div class="idea-title">Relax in Wengen</div><div class="idea-detail">Last afternoon in the Alps — enjoy the chalet, soak it all in.</div></div></div>
+        <div class="idea-row"><span class="idea-time">Evening</span><span class="idea-icon">&#127853;</span><div class="idea-body"><div class="idea-title">Farewell Swiss dinner</div><div class="idea-detail">Raclette or rösti — celebrate an amazing trip!</div></div></div>
       </div>
     </div>
 
