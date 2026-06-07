@@ -16,9 +16,11 @@
 | Flights RIC→EDI (Jun 10) | ✅ Booked | Delta HXZFDY — departs RIC 5:05pm |
 | Edinburgh apartment (Jun 11–14) | ✅ Booked | Capital One Travel, ref: S8J49WS84NV5 |
 | Real Mary King's Close (Jun 11) | ✅ Booked | Booking #42217132 — 5:00 PM tour |
+| Loch Ness & Highlands Tour (Jun 13) | ✅ Booked | Expedia #73447936060284 — 7:45 AM, Rabbie's |
 | Edinburgh → London train (Jun 14) | ✅ Booked | LNER, ref: 26SYHJJIU0 |
 | London apartment (Jun 14–19) | ✅ Booked | Expedia #72073826626599 — **⚠️ cancel deadline Jun 7 6pm** |
 | Shakespeare's Globe (Jun 14) | ✅ Booked | Order 5347986 — 6:30 PM |
+| London Hop-On Hop-Off + Cruise (Jun 15) | ✅ Booked | Expedia #73447946817668 — Big Bus Tours |
 | The Jugged Hare dinner (Jun 17) | ✅ Booked | Ref: DMN-16952452743 |
 | London → Paris Eurostar (Jun 19) | ⚠️ Booked | PNR CM4NJM — **passenger info required** |
 | Paris Seine Cruise (Jun 19) | ✅ Booked | Expedia #73465019743842 — Bateaux Parisiens |
@@ -189,6 +191,15 @@
 
 ## EVENTS, ACTIVITIES & DINING
 
+### Loch Ness, Glen Coe & the Highlands — Full-Day Tour (Jun 13)
+- **Operator:** Rabbie's Small Group Tours | tours@rabbies.com
+- **Expedia itinerary:** 73447936060284
+- **Date:** Saturday, June 13, 2026 at **07:45 AM**
+- **Meeting point:** Edinburgh Bus Station, Elder Street, Gate J and Gate K, Edinburgh EH1 3DX
+- **Tickets:** 4 vouchers — Paul Sanders
+- **Total paid:** $563.34 (MasterCard ••••4671, paid May 12, 2026)
+- **Cancellation:** Free up to 24 hours before activity. No cancellations, changes, or refunds after that.
+
 ### The Real Mary King's Close — Underground Tour (Jun 11)
 - **Venue:** The Real Mary King's Close, 2 Warriston's Close, High Street, Edinburgh EH1 1PG
 - **Booking number:** 42217132
@@ -201,6 +212,16 @@
 - **Total paid:** £99.00
 - **Booked by:** Laura Sanders (lauraleasanders@gmail.com)
 - **Policies:** Non-refundable. Rebooking allowed up to 4 hours before tour (£15 rebooking fee for Standard Tickets). Fully cashless. Lockers available in the courtyard. Optional audio guide — download from their site beforehand.
+
+### London Hop-On Hop-Off Bus + Thames River Cruise (Jun 15)
+- **Operator:** Big Bus Tours | tradesupport@bigbustours.com
+- **Expedia itinerary:** 73447946817668
+- **Date:** Monday, June 15, 2026
+- **Ticket type:** 2-Day, 48-Hour Ticket + River Cruise + Night Tour
+- **Start point:** Stop 1 — Green Park Underground (City Red Route), Green Park, London W1J 9DZ
+- **Tickets:** 4 vouchers — Paul Sanders
+- **Total paid:** $239.44 (MasterCard ••••4671, paid May 12, 2026)
+- **Cancellation:** Free up to 24 hours before activity. No cancellations, changes, or refunds after that.
 
 ### Shakespeare's Globe — A Midsummer Night's Dream (Jun 14)
 - **Venue:** Globe Theatre, London (outdoor — standing yard)
@@ -268,7 +289,9 @@
 | London — Eight Apartments Shoreditch | EXP-r2NZ04QA / Expedia #72073826626599 | Expedia |
 | Paris — Chic Parisian Two Bedroom | HA-YF8T78 (Vrbo) / Expedia #73447654569018 | Vrbo / Expedia |
 | Wengen Airbnb | HMS9JARNF9 | Airbnb |
+| Loch Ness & Highlands Tour | Expedia #73447936060284 | Expedia / Rabbie's |
 | Real Mary King's Close | 42217132 | realmarykingsclose.com |
 | Globe Theatre | Order 5347986 | Shakespeare's Globe |
+| London Hop-On Hop-Off + Cruise | Expedia #73447946817668 | Expedia / Big Bus Tours |
 | Jugged Hare | DMN-16952452743 | DesignMyNight |
 | Bateaux Parisiens Seine Cruise | Expedia #73465019743842 | Expedia |
