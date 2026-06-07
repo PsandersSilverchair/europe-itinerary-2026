@@ -1,5 +1,5 @@
 # Sanders Europe 2026 — Master Booking Reference
-*Last updated: June 6, 2026 | Sources: Laura's Gmail forwarded to paul.r.sanders@gmail.com; Capital One Travel; Expedia confirmations*
+*Last updated: June 7, 2026 | Sources: Laura's Gmail forwarded to paul.r.sanders@gmail.com; Capital One Travel; Expedia confirmations*
 
 ---
 
@@ -15,6 +15,7 @@
 |------|--------|-------|
 | Flights RIC→EDI (Jun 10) | ✅ Booked | Delta HXZFDY — departs RIC 5:05pm |
 | Edinburgh apartment (Jun 11–14) | ✅ Booked | Capital One Travel, ref: S8J49WS84NV5 |
+| Real Mary King's Close (Jun 11) | ✅ Booked | Booking #42217132 — 5:00 PM tour |
 | Edinburgh → London train (Jun 14) | ✅ Booked | LNER, ref: 26SYHJJIU0 |
 | London apartment (Jun 14–19) | ✅ Booked | Expedia #72073826626599 — **⚠️ cancel deadline Jun 7 6pm** |
 | Shakespeare's Globe (Jun 14) | ✅ Booked | Order 5347986 — 6:30 PM |
@@ -187,6 +188,19 @@
 
 ## EVENTS, ACTIVITIES & DINING
 
+### The Real Mary King's Close — Underground Tour (Jun 11)
+- **Venue:** The Real Mary King's Close, 2 Warriston's Close, High Street, Edinburgh EH1 1PG
+- **Booking number:** 42217132
+- **Date:** Thursday, June 11, 2026 at **17:00 (5:00 PM)**
+- **Check-in time:** 16:50 — arrive at least 5 minutes before tour
+- **Meeting point:** 2 Warriston's Cl, Edinburgh EH1 1PG — on the Royal Mile, across from St Giles Cathedral
+- **Tickets:**
+  - 2x Adult Standard Ticket: £28.50 each = £57.00
+  - 2x Child Standard Ticket (5–15 years): £21.00 each = £42.00
+- **Total paid:** £99.00
+- **Booked by:** Laura Sanders (lauraleasanders@gmail.com)
+- **Policies:** Non-refundable. Rebooking allowed up to 4 hours before tour (£15 rebooking fee for Standard Tickets). Fully cashless. Lockers available in the courtyard. Optional audio guide — download from their site beforehand.
+
 ### Shakespeare's Globe — A Midsummer Night's Dream (Jun 14)
 - **Venue:** Globe Theatre, London (outdoor — standing yard)
 - **Order:** 5347986 (ordered May 28, 2026)
@@ -253,6 +267,7 @@
 | London — Eight Apartments Shoreditch | EXP-r2NZ04QA / Expedia #72073826626599 | Expedia |
 | Paris — Chic Parisian Two Bedroom | HA-YF8T78 (Vrbo) / Expedia #73447654569018 | Vrbo / Expedia |
 | Wengen Airbnb | HMS9JARNF9 | Airbnb |
+| Real Mary King's Close | 42217132 | realmarykingsclose.com |
 | Globe Theatre | Order 5347986 | Shakespeare's Globe |
 | Jugged Hare | DMN-16952452743 | DesignMyNight |
 | Bateaux Parisiens Seine Cruise | Expedia #73465019743842 | Expedia |
