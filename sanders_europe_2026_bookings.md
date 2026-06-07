@@ -21,6 +21,7 @@
 | London apartment (Jun 14–19) | ✅ Booked | Expedia #72073826626599 — **⚠️ cancel deadline Jun 7 6pm** |
 | Shakespeare's Globe (Jun 14) | ✅ Booked | Order 5347986 — 6:30 PM |
 | London Hop-On Hop-Off + Cruise (Jun 15) | ✅ Booked | Expedia #73447946817668 — Big Bus Tours |
+| Stonehenge & Roman Baths Tour (Jun 18) | ✅ Booked | Expedia #73455377749613 — 8:15 AM, Premium Tours |
 | The Jugged Hare dinner (Jun 17) | ✅ Booked | Ref: DMN-16952452743 |
 | London → Paris Eurostar (Jun 19) | ⚠️ Booked | PNR CM4NJM — **passenger info required** |
 | Paris Seine Cruise (Jun 19) | ✅ Booked | Expedia #73465019743842 — Bateaux Parisiens |
@@ -213,6 +214,15 @@
 - **Booked by:** Laura Sanders (lauraleasanders@gmail.com)
 - **Policies:** Non-refundable. Rebooking allowed up to 4 hours before tour (£15 rebooking fee for Standard Tickets). Fully cashless. Lockers available in the courtyard. Optional audio guide — download from their site beforehand.
 
+### Stonehenge & Roman Baths — Full-Day Tour (Jun 18)
+- **Operator:** Premium Tours | bookings@premiumtours.co.uk
+- **Expedia itinerary:** 73455377749613
+- **Date:** Thursday, June 18, 2026 at **08:15 AM**
+- **Meeting point:** Victoria Coach Station, 164 Buckingham Palace Road, London SW1W 9TP
+- **Tickets:** 4 vouchers — Paul Sanders
+- **Total paid:** $628.68 (MasterCard ••••4671, paid May 22, 2026)
+- **Cancellation:** Free up to 24 hours before activity. No cancellations, changes, or refunds after that.
+
 ### London Hop-On Hop-Off Bus + Thames River Cruise (Jun 15)
 - **Operator:** Big Bus Tours | tradesupport@bigbustours.com
 - **Expedia itinerary:** 73447946817668
@@ -293,5 +303,6 @@
 | Real Mary King's Close | 42217132 | realmarykingsclose.com |
 | Globe Theatre | Order 5347986 | Shakespeare's Globe |
 | London Hop-On Hop-Off + Cruise | Expedia #73447946817668 | Expedia / Big Bus Tours |
+| Stonehenge & Roman Baths Tour | Expedia #73455377749613 | Expedia / Premium Tours |
 | Jugged Hare | DMN-16952452743 | DesignMyNight |
 | Bateaux Parisiens Seine Cruise | Expedia #73465019743842 | Expedia |
