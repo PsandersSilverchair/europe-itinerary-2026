@@ -21,6 +21,7 @@
 | London apartment (Jun 14–19) | ✅ Booked | Expedia #72073826626599 — **⚠️ cancel deadline Jun 7 6pm** |
 | Shakespeare's Globe (Jun 14) | ✅ Booked | Order 5347986 — 6:30 PM |
 | London Hop-On Hop-Off + Cruise (Jun 15) | ✅ Booked | Expedia #73447946817668 — Big Bus Tours |
+| Tower of London (Jun 16) | ✅ Booked | Expedia #73469438408679 — 10:00 AM, Beefeater Tour |
 | Stonehenge & Roman Baths Tour (Jun 18) | ✅ Booked | Expedia #73455377749613 — 8:15 AM, Premium Tours |
 | The Jugged Hare dinner (Jun 17) | ✅ Booked | Ref: DMN-16952452743 |
 | London → Paris Eurostar (Jun 19) | ⚠️ Booked | PNR CM4NJM — **passenger info required** |
@@ -226,6 +227,14 @@
 - **Total paid:** $628.68 (MasterCard ••••4671, paid May 22, 2026)
 - **Cancellation:** Free up to 24 hours before activity. No cancellations, changes, or refunds after that.
 
+### Tower of London — Tickets with Yeoman Warder Beefeater Tour (Jun 16)
+- **Expedia itinerary:** 73469438408679
+- **Date:** Tuesday, June 16, 2026 at **10:00 AM (Timed Admission)**
+- **Location:** Tower of London, Main Entrance — EC3N 4AB, London
+- **Tickets:** 4 vouchers — Paul Sanders
+- **Total paid:** $148.10 (MasterCard ••••4671, paid Jun 8, 2026)
+- **Cancellation:** Free up to 24 hours before activity. No cancellations, changes, or refunds after that.
+
 ### London Hop-On Hop-Off Bus + Thames River Cruise (Jun 15)
 - **Operator:** Big Bus Tours | tradesupport@bigbustours.com
 - **Expedia itinerary:** 73447946817668
@@ -336,6 +345,7 @@
 | Loch Ness & Highlands Tour | Expedia #73447936060284 | Expedia / Rabbie's |
 | Real Mary King's Close | 42217132 | realmarykingsclose.com |
 | Globe Theatre | Order 5347986 | Shakespeare's Globe |
+| Tower of London | Expedia #73469438408679 | Expedia |
 | London Hop-On Hop-Off + Cruise | Expedia #73447946817668 | Expedia / Big Bus Tours |
 | Stonehenge & Roman Baths Tour | Expedia #73455377749613 | Expedia / Premium Tours |
 | Jugged Hare | DMN-16952452743 | DesignMyNight |
