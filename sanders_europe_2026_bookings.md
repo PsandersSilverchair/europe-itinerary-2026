@@ -25,6 +25,7 @@
 | The Jugged Hare dinner (Jun 17) | ✅ Booked | Ref: DMN-16952452743 |
 | London → Paris Eurostar (Jun 19) | ⚠️ Booked | PNR CM4NJM — **passenger info required** |
 | Paris Seine Cruise (Jun 19) | ✅ Booked | Expedia #73465019743842 — Bateaux Parisiens |
+| Eiffel Tower Tour (Jun 21) | ✅ Booked | Expedia #73469280962208 — 5:30 PM, 2nd floor by lift |
 | Paris apartment (Jun 19–23) | ✅ Booked | Vrbo HA-YF8T78 / Expedia #73447654569018 — **⚠️ $4,134.98 due May 20 — confirm paid** |
 | Paris → Basel train (Jun 23) | ✅ Booked | TGV Lyria, PNR: 97QX5E |
 | Basel → Wengen rail | ❌ Not booked | Needs research + booking |
@@ -259,6 +260,16 @@
 - **To change:** Reply to confirmation email (keep subject line unchanged)
 - **To cancel:** Use link in confirmation email
 
+### Eiffel Tower Access Tour — 2nd Floor by Lift (Jun 21)
+- **Operator:** Europe Tourisme | europetourisme@gmail.com
+- **Expedia itinerary:** 73469280962208
+- **Date:** Sunday, June 21, 2026 at **5:30 PM**
+- **Location:** 19 Avenue de la Bourdonnais, Paris 75007, France
+- **Tour type:** 2nd floor access (no summit) by lift, in English
+- **Tickets:** 4 vouchers — Paul Sanders
+- **Total paid:** $322.16 (MasterCard ••••4671, paid Jun 8, 2026)
+- **Cancellation:** Non-refundable. Cannot be changed or cancelled after booking.
+
 ### Bateaux Parisiens Seine Cruise (Jun 19)
 - **Activity:** Seine Sightseeing Cruise from the Eiffel Tower — 1 Hour
 - **Expedia itinerary:** 73465019743842
@@ -305,4 +316,5 @@
 | London Hop-On Hop-Off + Cruise | Expedia #73447946817668 | Expedia / Big Bus Tours |
 | Stonehenge & Roman Baths Tour | Expedia #73455377749613 | Expedia / Premium Tours |
 | Jugged Hare | DMN-16952452743 | DesignMyNight |
+| Eiffel Tower Tour | Expedia #73469280962208 | Expedia |
 | Bateaux Parisiens Seine Cruise | Expedia #73465019743842 | Expedia |
