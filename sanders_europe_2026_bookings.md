@@ -25,7 +25,9 @@
 | The Jugged Hare dinner (Jun 17) | ✅ Booked | Ref: DMN-16952452743 |
 | London → Paris Eurostar (Jun 19) | ⚠️ Booked | PNR CM4NJM — **passenger info required** |
 | Paris Seine Cruise (Jun 19) | ✅ Booked | Expedia #73465019743842 — Bateaux Parisiens |
+| Château de Versailles (Jun 20) | ✅ Booked | Billet Passeport — 11:00 AM, Entrance A, 4 tickets |
 | Eiffel Tower Tour (Jun 21) | ✅ Booked | Expedia #73469280962208 — 5:30 PM, 2nd floor by lift |
+| Louvre Museum (Jun 22) | ✅ Booked | Order C261590018330 — 3:30 PM, 4 tickets, €64 |
 | Paris apartment (Jun 19–23) | ✅ Booked | Vrbo HA-YF8T78 / Expedia #73447654569018 — **⚠️ $4,134.98 due May 20 — confirm paid** |
 | Paris → Basel train (Jun 23) | ✅ Booked | TGV Lyria, PNR: 97QX5E |
 | Basel → Wengen rail | ❌ Not booked | Needs research + booking |
@@ -270,6 +272,27 @@
 - **Total paid:** $322.16 (MasterCard ••••4671, paid Jun 8, 2026)
 - **Cancellation:** Non-refundable. Cannot be changed or cancelled after booking.
 
+### Château de Versailles — Billet Passeport (Jun 20)
+- **Date:** Saturday, June 20, 2026 at **11:00 AM**
+- **Ticket type:** Billet Passeport (palace + gardens)
+- **Tickets:** 4 — Paul, Laura, Levi, Micah Sanders
+- **Entrance:** A
+- **Platform:** digitick.com
+- **Note:** Reference number on individual tickets — check digitick app/email for order details.
+
+### Louvre Museum — Collections Permanentes (Jun 22)
+- **Booked by:** Laura Sanders (via ticket.louvre.fr)
+- **Order:** C261590018330 | **Sale ref:** V260781333299
+- **Date:** Monday, June 22, 2026 at **3:30 PM (15:30)**
+- **Admission:**
+  - Laura Sanders (Adult): €32 — Ticket #75126078353818292
+  - Paul Sanders (Adult): €32 — Ticket #75126078353818342
+  - Levi Sanders (Under 18 / free): €0 — Ticket #75126078353818420
+  - Micah Sanders (Under 18 / free): €0 — Ticket #75126078353818514
+- **Total paid:** €64
+- **Entrance:** Carrousel or Pyramid (Porte des Lions open until 17:15)
+- **Cancellation:** Tickets are nominative, non-transferable, and non-modifiable. Single-entry only.
+
 ### Bateaux Parisiens Seine Cruise (Jun 19)
 - **Activity:** Seine Sightseeing Cruise from the Eiffel Tower — 1 Hour
 - **Expedia itinerary:** 73465019743842
@@ -316,5 +339,7 @@
 | London Hop-On Hop-Off + Cruise | Expedia #73447946817668 | Expedia / Big Bus Tours |
 | Stonehenge & Roman Baths Tour | Expedia #73455377749613 | Expedia / Premium Tours |
 | Jugged Hare | DMN-16952452743 | DesignMyNight |
+| Château de Versailles | Billet Passeport — see digitick tickets | digitick.com |
 | Eiffel Tower Tour | Expedia #73469280962208 | Expedia |
+| Louvre Museum | Order C261590018330 / Sale V260781333299 | ticket.louvre.fr |
 | Bateaux Parisiens Seine Cruise | Expedia #73465019743842 | Expedia |
