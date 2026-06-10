@@ -31,7 +31,10 @@
 | Louvre Museum (Jun 22) | ✅ Booked | Order C261590018330 — 3:30 PM, 4 tickets, €64 |
 | Paris apartment (Jun 19–23) | ✅ Booked | Vrbo HA-YF8T78 / Expedia #73447654569018 — **⚠️ $4,134.98 due May 20 — confirm paid** |
 | Paris → Basel train (Jun 23) | ✅ Booked | TGV Lyria, PNR: 97QX5E |
-| Basel → Wengen rail | ❌ Not booked | Needs research + booking |
+| Swiss Half Fare Cards (family) | ✅ Booked | STC Order 1100202601100566 — 4 cards, 50% off all Swiss rail |
+| Basel → Wengen rail | ❌ Not booked | **Use Half Fare Cards for 50% off** — book via sbb.ch |
+| Jungfraujoch excursion (Jun 25) | ✅ Booked | STC Order 1100202601100566 — Paul + Laura, kids free |
+| Jungfraujoch seat reservation | ❌ Not booked | **Required May–Oct — CHF 10/person** — book at jungfrau.ch/seatreservation |
 | Wengen Airbnb (Jun 23–27) | ✅ Booked | HMS9JARNF9 — **⚠️ payment due Jun 8** |
 | Flights ZRH→RIC (Jun 27) | ✅ Booked | Delta HXZFDY — departs ZRH 12:40pm |
 
@@ -313,6 +316,26 @@
 - **Contact:** Bpccota.Fr.FR@sodexo.com
 - **⏱️ Timing note:** Eurostar arrives Paris Gare du Nord at 1:50 PM. Cruise is in the afternoon — confirm exact time on voucher.
 
+### Jungfraujoch — Top of Europe (Jun 25)
+- **Operator:** Jungfrau Railways (STS AG) via Switzerland Travel Centre
+- **STC Order:** 1100202601100566
+- **Date:** Thursday, June 25, 2026
+- **Ticket validity:** Jun 25–26, 2026
+- **Route:** Wengen/Grindelwald ↔ Jungfraujoch Top of Europe
+- **Passengers:** Paul + Laura (4 tickets purchased — kids free)
+- **Class:** 2nd class
+- **Ticket ID (Laura):** 640819515909 | Order 151470431951
+- **Ticket ID (Paul):** Order 151470431952
+- **⚠️ Seat reservation required May–Oct:** CHF 10/person — book at www.jungfrau.ch/seatreservation
+- **Booked by:** Laura Sanders via switzerlandtravelcentre.com
+
+### Swiss Half Fare Cards (Jun 23–27)
+- **STC Order:** 1100202601100566
+- **Passengers:** Paul, Laura, Levi, Micah Sanders (4 cards)
+- **Benefit:** 50% off all Swiss rail, boats, cable cars throughout Switzerland
+- **Applies to:** Basel → Wengen journey (book tickets at sbb.ch), any other Swiss transport
+- **Note:** Cards are personal and must be shown with photo ID
+
 ---
 
 ## OPEN ITEMS / TO-DO
@@ -320,13 +343,14 @@
 1. **🚨 London apartment cancel deadline — Jun 7 (TOMORROW)** — The Eight Apartments Shoreditch cancellation deadline is 6:00 PM London time Jun 7. Non-refundable after that. Confirm you're happy with the booking.
 2. **⚠️ Eurostar passenger info** — Must complete additional passenger information via the app or eurostar.com (PNR CM4NJM) before tickets can be accessed.
 3. **⚠️ Paris apartment payment** — $4,134.98 was due May 20 to Vrbo (HA-YF8T78). Confirm this has been charged to your card.
-4. **Basel → Wengen rail** — Research and book. Note 3:26 PM Basel arrival; Wengen check-in is 4:00 PM (will need at minimum ~2h travel from Basel to Wengen).
-5. **Jugged Hare deposit** — Confirm exact amount paid.
-6. **⚠️ Airbnb payment due Jun 8** — $1,675.87 charge coming to Apple Pay (Wengen).
-7. **Edinburgh check-in instructions** — Should arrive from host by Jun 8; contact Francesco at +44 20 3778 2170 / reservations.scotland@joivy.com if not received.
-8. **London apartment check-in** — No front desk at Eight Apartments Shoreditch. Contact property before Jun 12 (48h prior) to arrange. Complete online registration and have photo ID ready.
-9. **Paris cruise voucher** — Confirm exact departure time on the Bateaux Parisiens voucher (Expedia itinerary 73465019743842).
-10. **Wengen → Zürich airport (Jun 27)** — Return flight departs ZRH at 12:40 PM. Plan Wengen checkout by 10:00 AM and allow ~2.5h travel to ZRH.
+4. **Basel → Wengen rail** — Still needs booking. TGV arrives Basel 3:26 PM; Wengen check-in 4:00 PM (~2h+ journey). Use Half Fare Cards for 50% off — book via sbb.ch.
+5. **🚨 Jungfraujoch seat reservation** — Mandatory May–Oct. CHF 10 per person. Book at www.jungfrau.ch/seatreservation. Needed for Jun 25.
+6. **Jugged Hare deposit** — Confirm exact amount paid.
+7. **⚠️ Airbnb payment due Jun 8** — $1,675.87 charge coming to Apple Pay (Wengen).
+8. **Edinburgh check-in instructions** — Should arrive from host by Jun 8; contact Francesco at +44 20 3778 2170 / reservations.scotland@joivy.com if not received.
+9. **London apartment check-in** — No front desk at Eight Apartments Shoreditch. Contact property before Jun 12 (48h prior) to arrange. Complete online registration and have photo ID ready.
+10. **Paris cruise voucher** — Confirm exact departure time on the Bateaux Parisiens voucher (Expedia itinerary 73465019743842).
+11. **Wengen → Zürich airport (Jun 27)** — Return flight departs ZRH at 12:40 PM. Plan Wengen checkout by 10:00 AM and allow ~2.5h travel to ZRH.
 
 ---
 
@@ -353,3 +377,4 @@
 | Eiffel Tower Tour | Expedia #73469280962208 | Expedia |
 | Louvre Museum | Order C261590018330 / Sale V260781333299 | ticket.louvre.fr |
 | Bateaux Parisiens Seine Cruise | Expedia #73465019743842 | Expedia |
+| Swiss Half Fare Cards + Jungfraujoch | STC Order 1100202601100566 | switzerlandtravelcentre.com |
