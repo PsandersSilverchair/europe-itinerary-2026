@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour Guides — Sanders Europe 2026</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="guide.css">
+  <style>
+    .city-block { margin-bottom: 22px; }
+    .city-block h2 {
+      font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--muted); margin: 0 0 8px 4px;
+    }
+    .guide-card {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--card); border-radius: 12px; padding: 13px 15px;
+      margin-bottom: 8px; text-decoration: none; color: var(--text);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .guide-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.14); }
+    .guide-card .gc-icon {
+      width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 1.25rem;
+    }
+    .gc-edinburgh { background: #dde8f5; border-left: 4px solid var(--edinburgh); }
+    .gc-london    { background: #d8eeeb; border-left: 4px solid var(--london); }
+    .gc-paris     { background: #ecdcec; border-left: 4px solid var(--paris); }
+    .gc-swiss     { background: #faeaea; border-left: 4px solid var(--swiss); }
+    .guide-card .gc-body { flex: 1; }
+    .guide-card .gc-date { font-size: 0.76rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .guide-card .gc-title { font-size: 0.98rem; font-weight: 700; }
+    .gc-tag {
+      font-size: 0.68rem; font-weight: 800; padding: 2px 8px; border-radius: 10px;
+      text-transform: uppercase; letter-spacing: 0.04em; flex-shrink: 0;
+    }
+    .gc-tag.booked { background: #d4f0e2; color: #1a6b3a; }
+    .gc-tag.idea   { background: #ddeef8; color: #2a5f8a; }
+  </style>
+</head>
+<body class="region-edinburgh">
+
+<header class="guide-header">
+  <a class="back-link" href="../index.html">&larr; Back to itinerary</a>
+  <div class="kicker">Sanders Europe 2026</div>
+  <h1>&#128214; Tour Guides</h1>
+  <span class="when">A personal guidebook for every stop &bull; Jun 11&ndash;26</span>
+</header>
+
+<main>
+
+  <div class="big-picture">
+    <strong class="bp-title">How to use these</strong>
+    Each stop has its own guide: read <em>Before You Go — The Story</em> the night before
+    (great read-aloud material on trains), then use <em>On Tour</em> and the
+    <em>Levi &amp; Micah spotting lists</em> while you're there. Every guide ends with
+    sources if you want to go deeper.
+  </div>
+
+  <div class="city-block">
+    <h2>Edinburgh &amp; the Highlands &bull; Jun 11&ndash;13</h2>
+    <a class="guide-card" href="edinburgh-arrival-royal-mile.html"><div class="gc-icon gc-edinburgh">&#128694;</div><div class="gc-body"><div class="gc-date">Thu Jun 11</div><div class="gc-title">The Royal Mile &amp; Calton Hill</div></div><span class="gc-tag idea">Ideas</span></a>
+    <a class="guide-card" href="real-mary-kings-close.html"><div class="gc-icon gc-edinburgh">&#128373;&#65039;</div><div class="gc-body"><div class="gc-date">Thu Jun 11 &bull; 5:00 PM</div><div class="gc-title">The Real Mary King's Close</div></div><span class="gc-tag booked">Booked</span></a>
+    <a class="guide-card" href="arthurs-seat-castle-whisky.html"><div class="gc-icon gc-edinburgh">&#129462;</div><div class="gc-body"><div class="gc-date">Fri Jun 12</div><div class="gc-title">Arthur's Seat, the Castle &amp; Whisky</div></div><span class="gc-tag idea">Ideas</span></a>
+    <a class="guide-card" href="loch-ness-highlands.html"><div class="gc-icon gc-edinburgh">&#127956;</div><div class="gc-body"><div class="gc-date">Sat Jun 13 &bull; 7:45 AM</div><div class="gc-title">Loch Ness, Glen Coe &amp; the Highlands</div></div><span class="gc-tag booked">Booked</span></a>
+  </div>
+
+  <div class="city-block">
+    <h2>London &bull; Jun 14&ndash;18</h2>
+    <a class="guide-card" href="shakespeares-globe.html"><div class="gc-icon gc-london">&#127917;</div><div class="gc-body"><div class="gc-date">Sun Jun 14 &bull; 6:30 PM</div><div class="gc-title">Shakespeare's Globe — A Midsummer Night's Dream</div></div><span class="gc-tag booked">Booked</span></a>
+    <a class="guide-card" href="big-bus-london.html"><div class="gc-icon gc-london">&#128652;</div><div class="gc-body"><div class="gc-date">Mon Jun 15</div><div class="gc-title">Big Bus London + Thames Cruise</div></div><span class="gc-tag booked">Booked</span></a>
+    <a class="guide-card" href="westminster-south-bank.html"><div class="gc-icon gc-london">&#128081;</div><div class="gc-body"><div class="gc-date">Mon Jun 15</div><div class="gc-title">Westminster, the Abbey &amp; Covent Garden</div></div><span class="gc-tag idea">Ideas</span></a>
+    <a class="guide-card" href="tower-of-london.html"><div class="gc-icon gc-london">&#127984;</div><div class="gc-body"><div class="gc-date">Tue Jun 16 &bull; 10:00 AM</div><div class="gc-title">Tower of London</div></div><span class="gc-tag booked">Booked</span></a>
+    <a class="guide-card" href="south-bank-london-eye.html"><div class="gc-icon gc-london">&#127905;</div><div class="gc-body"><div class="gc-date">Tue Jun 16</div><div class="gc-title">Tower Bridge, Borough Market &amp; the London Eye</div></div><span class="gc-tag idea">Ideas</span></a>
+    <a class="guide-card" href="richmond-notting-hill-kensington.html"><div class="gc-icon gc-london">&#9917;</div><div class="gc-body"><div class="gc-date">Wed Jun 17</div><div class="gc-title">Ted Lasso's Richmond, Notting Hill &amp; Kensington</div></div><span class="gc-tag idea">Ideas</span></a>
+    <a class="guide-card" href="jugged-hare.html"><div class="gc-icon gc-london">&#127869;&#65039;</div><div class="gc-body"><div class="gc-date">Wed Jun 17 &bull; 8:00 PM</div><div class="gc-title">Dinner at The Jugged Hare</div></div><span class="gc-tag booked">Booked</span></a>
+    <a class="guide-card" href="stonehenge-roman-baths.html"><div class="gc-icon gc-london">&#129704;</div><div class="gc-body"><div class="gc-date">Thu Jun 18 &bull; 8:15 AM</div><div class="gc-title">Stonehenge &amp; the Roman Baths</div></div><span class="gc-tag booked">Booked</span></a>
+  </div>
+
+  <div class="city-block">
+    <h2>Paris &bull; Jun 19&ndash;22</h2>
+    <a class="guide-card" href="seine-cruise.html"><div class="gc-icon gc-paris">&#9972;&#65039;</div><div class="gc-body"><div class="gc-date">Fri Jun 19</div><div class="gc-title">Seine Cruise — Bateaux Parisiens</div></div><span class="gc-tag booked">Booked</span></a>
+    <a class="guide-card" href="versailles.html"><div class="gc-icon gc-paris">&#127963;&#65039;</div><div class="gc-body"><div class="gc-date">Sat Jun 20 &bull; 11:00 AM</div><div class="gc-title">Château de Versailles</div></div><span class="gc-tag booked">Booked</span></a>
+    <a class="guide-card" href="le-marais.html"><div class="gc-icon gc-paris">&#127843;</div><div class="gc-body"><div class="gc-date">Sat Jun 20 &bull; Evening</div><div class="gc-title">An Evening in Le Marais</div></div><span class="gc-tag idea">Ideas</span></a>
+    <a class="guide-card" href="eiffel-tower.html"><div class="gc-icon gc-paris">&#128508;</div><div class="gc-body"><div class="gc-date">Sun Jun 21 &bull; 5:30 PM</div><div class="gc-title">The Eiffel Tower</div></div><span class="gc-tag booked">Booked</span></a>
+    <a class="guide-card" href="orsay-and-chartier.html"><div class="gc-icon gc-paris">&#127912;</div><div class="gc-body"><div class="gc-date">Sun Jun 21</div><div class="gc-title">Musée d'Orsay &amp; Bouillon Chartier</div></div><span class="gc-tag idea">Ideas</span></a>
+    <a class="guide-card" href="montmartre.html"><div class="gc-icon gc-paris">&#9962;</div><div class="gc-body"><div class="gc-date">Mon Jun 22 &bull; Morning</div><div class="gc-title">Montmartre &amp; Sacré-Cœur</div></div><span class="gc-tag idea">Ideas</span></a>
+    <a class="guide-card" href="louvre.html"><div class="gc-icon gc-paris">&#128444;&#65039;</div><div class="gc-body"><div class="gc-date">Mon Jun 22 &bull; 3:30 PM</div><div class="gc-title">The Louvre</div></div><span class="gc-tag booked">Booked</span></a>
+    <a class="guide-card" href="paris-farewell-dinner.html"><div class="gc-icon gc-paris">&#127769;</div><div class="gc-body"><div class="gc-date">Mon Jun 22 &bull; Evening</div><div class="gc-title">Farewell Paris Dinner</div></div><span class="gc-tag idea">Ideas</span></a>
+  </div>
+
+  <div class="city-block">
+    <h2>Wengen &amp; the Bernese Oberland &bull; Jun 23&ndash;26</h2>
+    <a class="guide-card" href="wengen-village.html"><div class="gc-icon gc-swiss">&#127968;</div><div class="gc-body"><div class="gc-date">Wed Jun 24</div><div class="gc-title">Wengen Village &amp; Fondue</div></div><span class="gc-tag idea">Ideas</span></a>
+    <a class="guide-card" href="jungfraujoch.html"><div class="gc-icon gc-swiss">&#127956;</div><div class="gc-body"><div class="gc-date">Thu Jun 25</div><div class="gc-title">Jungfraujoch — Top of Europe</div></div><span class="gc-tag booked">Booked</span></a>
+    <a class="guide-card" href="kleine-scheidegg-mannlichen.html"><div class="gc-icon gc-swiss">&#128670;</div><div class="gc-body"><div class="gc-date">Flexible day</div><div class="gc-title">Kleine Scheidegg &amp; the Männlichen Royal Walk</div></div><span class="gc-tag idea">Ideas</span></a>
+    <a class="guide-card" href="lauterbrunnen-valley.html"><div class="gc-icon gc-swiss">&#128166;</div><div class="gc-body"><div class="gc-date">Fri Jun 26</div><div class="gc-title">Lauterbrunnen Valley &amp; Trümmelbach Falls</div></div><span class="gc-tag idea">Ideas</span></a>
+  </div>
+
+</main>
+
+<footer>Sanders Europe 2026 &bull; Tour Guides</footer>
+
+</body>
+</html>

@@ -36,7 +36,7 @@
 | Jungfraujoch excursion (Jun 25) | ✅ Booked | STC Order 1100202601100566 — Paul + Laura, kids free |
 | Jungfraujoch seat reservation | ❌ Not booked | **Required May–Oct — CHF 10/person** — book at jungfrau.ch/seatreservation |
 | Wengen Airbnb (Jun 23–27) | ✅ Booked | HMS9JARNF9 — **⚠️ payment due Jun 8** |
-| Flights ZRH→RIC (Jun 27) | ✅ Booked | Delta HXZFDY — departs ZRH 12:40pm |
+| Flights ZRH→RIC (Jun 27) | ✅ Booked | Delta HXZFDY — departs ZRH 1:35pm |
 
 ---
 
@@ -61,12 +61,12 @@
 ### Return: Zürich → Richmond (Jun 27)
 - **Operator:** Delta
 - **Confirmation:** HXZFDY (same booking as outbound)
-- **⚠️ ITINERARY APP ERROR:** The interactive itinerary lists the ZRH departure as "1:35 PM" — this is WRONG. Confirmed departure is **12:40 PM**. The app code needs to be corrected.
+- **✅ DEPARTURE CONFIRMED 1:35 PM** (Paul confirmed multiple times — this is the correct time; do NOT change it back to 12:40 PM).
 - **Leg 1 — Delta 53**
-  - Departs: 12:40 PM Sat Jun 27 — Zürich (ZRH)
-  - Arrives: 3:47 PM Sat Jun 27 — New York (JFK)
+  - Departs: 1:35 PM Sat Jun 27 — Zürich (ZRH)
+  - Arrives: 4:46 PM Sat Jun 27 — New York (JFK)
   - Duration: 9h 7m | Seats: 46F, 46G, 47F, 47G
-- **Layover:** 5h 33m at JFK
+- **Layover:** 4h 34m at JFK
 - **Leg 2 — Delta 4659** (operated by subsidiary/franchise)
   - Departs: 9:20 PM Sat Jun 27 — New York (JFK)
   - Arrives: 11:07 PM Sat Jun 27 — Richmond, VA (RIC)
@@ -350,7 +350,7 @@
 8. **Edinburgh check-in instructions** — Should arrive from host by Jun 8; contact Francesco at +44 20 3778 2170 / reservations.scotland@joivy.com if not received.
 9. **London apartment check-in** — No front desk at Eight Apartments Shoreditch. Contact property before Jun 12 (48h prior) to arrange. Complete online registration and have photo ID ready.
 10. **Paris cruise voucher** — Confirm exact departure time on the Bateaux Parisiens voucher (Expedia itinerary 73465019743842).
-11. **Wengen → Zürich airport (Jun 27)** — Return flight departs ZRH at 12:40 PM. Plan Wengen checkout by 10:00 AM and allow ~2.5h travel to ZRH.
+11. **Wengen → Zürich airport (Jun 27)** — Return flight departs ZRH at 1:35 PM. Plan Wengen checkout by 10:00 AM and allow ~2.5h travel to ZRH.
 
 ---
 
