@@ -1,0 +1,233 @@
+/* Shared stylesheet for Sanders Europe 2026 tour-guide pages.
+   Region accent is set per-page via the body class:
+   .region-edinburgh | .region-london | .region-paris | .region-swiss */
+
+:root {
+  --edinburgh: #4a6fa5;
+  --london:    #2e7d5e;
+  --paris:     #8b3a8b;
+  --swiss:     #c0392b;
+  --bg:        #f4f4f0;
+  --card:      #ffffff;
+  --text:      #1a1a1a;
+  --muted:     #555;
+  --warn:      #c0392b;
+  --warn-bg:   #fdf0ee;
+  --header:    #1a2a3a;
+}
+
+body.region-edinburgh { --accent: var(--edinburgh); --accent-bg: #dde8f5; }
+body.region-london    { --accent: var(--london);    --accent-bg: #d8eeeb; }
+body.region-paris     { --accent: var(--paris);     --accent-bg: #ecdcec; }
+body.region-swiss     { --accent: var(--swiss);     --accent-bg: #faeaea; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* ── HEADER ── */
+.guide-header {
+  background: var(--header);
+  color: #fff;
+  padding: 14px 16px 16px;
+  border-bottom: 4px solid var(--accent);
+}
+.back-link {
+  display: inline-block;
+  color: #aac4e0;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.back-link:hover { color: #fff; }
+.guide-header .kicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #aac4e0;
+}
+.guide-header h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; margin-top: 2px; }
+.guide-header .when {
+  display: inline-block;
+  margin-top: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+main { max-width: 680px; margin: 0 auto; padding: 16px 14px 60px; }
+
+/* ── HERO + IMAGES ── */
+figure {
+  margin: 14px 0 18px;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+figure img { width: 100%; display: block; }
+figcaption {
+  font-size: 0.78rem;
+  color: var(--muted);
+  padding: 8px 12px;
+  line-height: 1.45;
+}
+figcaption a { color: #1a6fbf; text-decoration: none; }
+figcaption a:hover { text-decoration: underline; }
+
+/* ── SECTIONS ── */
+.section {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 18px 18px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.section h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-bg);
+}
+.section h2 .emoji { margin-right: 6px; }
+.section h3 { font-size: 0.98rem; font-weight: 700; margin: 14px 0 4px; }
+.section p { margin-bottom: 10px; }
+.section p:last-child { margin-bottom: 0; }
+.section ul, .section ol { margin: 0 0 10px 22px; }
+.section li { margin-bottom: 6px; }
+
+/* Region-arc callout (the big-picture historical context) */
+.big-picture {
+  border-left: 4px solid var(--accent);
+  background: var(--accent-bg);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+.big-picture strong.bp-title {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+
+/* Kids' section */
+.kids {
+  border: 2px dashed var(--accent);
+  background: var(--card);
+}
+.kids h2 { border-bottom-color: var(--accent-bg); }
+.spot-list { list-style: none; margin-left: 0 !important; }
+.spot-list li {
+  padding: 8px 10px 8px 36px;
+  position: relative;
+  background: var(--accent-bg);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 0.93rem;
+}
+.spot-list li::before { content: "🔎"; position: absolute; left: 10px; top: 8px; }
+
+/* Practical info rows */
+.fact-row {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 0.93rem;
+}
+.fact-row:last-child { border-bottom: none; }
+.fact-label { color: var(--muted); font-size: 0.85rem; min-width: 110px; flex-shrink: 0; }
+.fact-value { font-weight: 600; }
+.fact-value a { color: #1a6fbf; text-decoration: none; }
+.fact-value a:hover { text-decoration: underline; }
+
+.ref-code {
+  font-family: "SF Mono", "Fira Code", monospace;
+  background: #f0f4f8;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.note {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.note.warn { background: var(--warn-bg); color: #7a1a1a; }
+
+/* Timeline-ish itinerary inside a page */
+.tour-step {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+.tour-step:last-child { border-bottom: none; }
+.tour-step .step-time {
+  min-width: 84px;
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding-top: 2px;
+}
+.tour-step .step-body .step-title { font-weight: 700; font-size: 0.95rem; }
+.tour-step .step-body .step-detail { font-size: 0.88rem; color: var(--muted); margin-top: 2px; }
+
+/* Sources */
+.sources { font-size: 0.85rem; }
+.sources ol { margin-left: 20px; }
+.sources li { margin-bottom: 8px; word-break: break-word; }
+.sources a { color: #1a6fbf; text-decoration: none; }
+.sources a:hover { text-decoration: underline; }
+
+/* Footer nav between guides */
+.guide-footer-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+.guide-footer-nav a {
+  flex: 1;
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.guide-footer-nav a:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.14); }
+.guide-footer-nav .nav-dir { display: block; font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.guide-footer-nav .next { text-align: right; }
+
+footer { text-align: center; font-size: 0.8rem; color: #aaa; padding: 20px 16px; }
+
+@media (min-width: 480px) {
+  body { font-size: 18px; }
+  main { padding: 22px 20px 80px; }
+  .guide-header h1 { font-size: 1.9rem; }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- TEMPLATE for Sanders Europe 2026 tour-guide pages.
+     Copy this file, fill every [BRACKETED] placeholder, delete instructional comments.
+     body class must be one of: region-edinburgh | region-london | region-paris | region-swiss -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[STOP NAME] — Sanders Europe 2026</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="guide.css">
+</head>
+<body class="region-[REGION]">
+
+<header class="guide-header">
+  <a class="back-link" href="../index.html">&larr; Back to itinerary</a>
+  <div class="kicker">[CITY] &bull; [BOOKED or IDEA]</div>
+  <h1>[STOP NAME]</h1>
+  <span class="when">[e.g. Tue Jun 16 &bull; 10:00 AM]</span>
+</header>
+
+<main>
+
+  <figure>
+    <img src="[VERIFIED IMAGE URL]" alt="[ALT TEXT]" loading="lazy">
+    <figcaption>[Caption]. Photo: <a href="[COMMONS FILE PAGE URL]" target="_blank" rel="noopener">[Author]</a>, [License], via Wikimedia Commons.</figcaption>
+  </figure>
+
+  <div class="big-picture">
+    <strong class="bp-title">The Big Picture</strong>
+    [2–4 sentences placing this stop in the region's cultural/historical arc, drawn from the region brief.]
+  </div>
+
+  <div class="section">
+    <h2><span class="emoji">📖</span>Before You Go — The Story</h2>
+    [Pre-read narrative: engaging history parents can read aloud the night before or on the train. 3–6 paragraphs. May include h3 subheads.]
+  </div>
+
+  <div class="section">
+    <h2><span class="emoji">🧭</span>On Tour — What to See &amp; Do</h2>
+    [Highlights, suggested route/order, what's easy to miss. Use .tour-step rows for a timed plan if useful:]
+    <div class="tour-step">
+      <div class="step-time">[TIME]</div>
+      <div class="step-body">
+        <div class="step-title">[Title]</div>
+        <div class="step-detail">[Detail]</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section kids">
+    <h2><span class="emoji">🕵️</span>For Levi &amp; Micah — Spot These!</h2>
+    [1–2 fun intro sentences, then a scavenger-hunt list:]
+    <ul class="spot-list">
+      <li>[Thing to find + one-line fun fact]</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><span class="emoji">ℹ️</span>Good to Know</h2>
+    <div class="fact-row"><span class="fact-label">[Label]</span><span class="fact-value">[Value]</span></div>
+    [Practical rows: booking ref, meeting point/map link, timing, food, bathrooms, accessibility, weather/what to wear.]
+    <div class="note">[Optional tip]</div>
+  </div>
+
+  <div class="section sources">
+    <h2><span class="emoji">📚</span>Sources &amp; Further Reading</h2>
+    <ol>
+      <li><a href="[URL]" target="_blank" rel="noopener">[Source title]</a> — [what it backs up]</li>
+    </ol>
+  </div>
+
+  <div class="guide-footer-nav">
+    <a class="prev" href="[PREV-GUIDE].html"><span class="nav-dir">&larr; Previous stop</span>[Prev name]</a>
+    <a class="next" href="[NEXT-GUIDE].html"><span class="nav-dir">Next stop &rarr;</span>[Next name]</a>
+  </div>
+
+</main>
+
+<footer>Sanders Europe 2026 &bull; Tour Guide</footer>
+
+</body>
+</html>
